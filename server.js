@@ -236,7 +236,7 @@ function transformFoodResults(data) {
 
 // Helper function to transform a single food item
 function transformSingleFood(foodItem) {
-  const { food_id, food_name, food_description } = foodItem;
+  const { food_id, food_name, food_description, brand_name } = foodItem;
   
   // Extract nutrition values from the description
   const calories = extractCalories(food_description);
@@ -247,10 +247,15 @@ function transformSingleFood(foodItem) {
   // Extract serving size with improved pattern matching
   const servingInfo = extractServingInfo(food_description);
   
+  // Determine food type (Brand or Generic)
+  const foodType = brand_name ? 'Brand' : 'Generic';
+  
   return {
     id: food_id,
     name: food_name,
     description: food_description,
+    food_type: foodType,
+    brand_name: brand_name || null,
     calories: calories,
     protein: protein,
     carbs: carbs,
