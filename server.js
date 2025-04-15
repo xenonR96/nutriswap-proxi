@@ -244,20 +244,104 @@ function transformSingleFood(foodItem) {
   const carbs = extractNutrient(food_description, 'Carbs');
   const fat = extractNutrient(food_description, 'Fat');
   
-  // Extract serving size
-  const servingSizeMatch = food_description.match(/Per (\d+)g/);
-  const servingSize = servingSizeMatch ? parseInt(servingSizeMatch[1]) : 100;
+  // Extract serving size with improved pattern matching
+  const servingInfo = extractServingInfo(food_description);
   
   return {
     id: food_id,
     name: food_name,
+    description: food_description,
     calories: calories,
     protein: protein,
     carbs: carbs,
     fat: fat,
-    servingSize: servingSize,
-    servingUnit: 'g'
+    servingSize: servingInfo.size,
+    servingUnit: servingInfo.unit,
+    servingText: servingInfo.text
   };
+}
+
+// Helper function to extract serving information
+function extractServingInfo(description) {
+  // Default values
+  let result = {
+    size: 100,
+    unit: 'g',
+    text: null
+  };
+  
+  // Try to extract standard "Per Xg" format first
+  const gramPattern = /Per (\d+)g/;
+  const gramMatch = description.match(gramPattern);
+  
+  if (gramMatch) {
+    result.size = parseInt(gramMatch[1]);
+    result.text = gramMatch[0];
+    return result;
+  }
+  
+  // Try more complex patterns like "Per 1/4 cup"
+  const complexPattern = /Per ([^-]+)/;
+  const complexMatch = description.match(complexPattern);
+  
+  if (complexMatch) {
+    const servingText = complexMatch[1].trim();
+    result.text = `Per ${servingText}`;
+    
+    // Check for standard measurements
+    if (servingText.includes('cup')) {
+      result.unit = 'cup';
+      
+      // Handle fractions like 1/4 cup
+      const fractionMatch = servingText.match(/(\d+)\/(\d+)/);
+      if (fractionMatch) {
+        result.size = parseInt(fractionMatch[1]) / parseInt(fractionMatch[2]);
+      } else {
+        // Handle whole numbers like 1 cup
+        const numberMatch = servingText.match(/(\d+)/);
+        if (numberMatch) {
+          result.size = parseInt(numberMatch[1]);
+        } else {
+          result.size = 1; // Default to 1 if no number found
+        }
+      }
+    } else if (servingText.includes('oz') || servingText.includes('ounce')) {
+      result.unit = 'oz';
+      
+      // Extract the number
+      const numberMatch = servingText.match(/(\d+)/);
+      if (numberMatch) {
+        result.size = parseInt(numberMatch[1]);
+      } else {
+        result.size = 1;
+      }
+    } else if (servingText.includes('tbsp') || servingText.includes('tablespoon')) {
+      result.unit = 'tbsp';
+      
+      // Extract the number
+      const numberMatch = servingText.match(/(\d+)/);
+      if (numberMatch) {
+        result.size = parseInt(numberMatch[1]);
+      } else {
+        result.size = 1;
+      }
+    } else if (servingText.includes('piece') || servingText.includes('cookie') || servingText.includes('serving')) {
+      result.unit = 'piece';
+      
+      // Extract the number
+      const numberMatch = servingText.match(/(\d+)/);
+      if (numberMatch) {
+        result.size = parseInt(numberMatch[1]);
+      } else {
+        result.size = 1;
+      }
+    }
+    
+    return result;
+  }
+  
+  // If no pattern matches, return default values
+  return result;
 }
 
 // Helper function to transform detailed food information
