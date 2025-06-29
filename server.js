@@ -1,237 +1,91 @@
-require('dotenv').config();
 const express = require('express');
-const axios = require('axios');
 const cors = require('cors');
-const morgan = require('morgan');
-const NodeCache = require('node-cache');
-
-// Initialize Express app
+const axios = require('axios');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Create cache instances
-const tokenCache = new NodeCache({ stdTTL: parseInt(process.env.TOKEN_CACHE_TTL) || 3500 });
-const foodCache = new NodeCache({ stdTTL: parseInt(process.env.FOOD_CACHE_TTL) || 86400 });
-
-// Middleware
+// Enable CORS for all origins
 app.use(cors());
 app.use(express.json());
-app.use(morgan('dev'));
 
-// Health check endpoint
-app.get('/api/status', (req, res) => {
-  res.status(200).json({ status: 'OK', message: 'Proxy server is up and running' });
-});
+// FatSecret API credentials
+const CLIENT_ID = '8ffd10d7d66c4ac5aba9bf5b2c433e4a';
+const CLIENT_SECRET = '6656b2469dbe4d8d8f8ef39c76188f62';
+const AUTH_URL = 'https://oauth.fatsecret.com/connect/token';
+const API_URL = 'https://platform.fatsecret.com/rest/server.api';
 
-// Route to search for foods
-app.get('/api/food/search', async (req, res) => {
+// Token storage (in production, use Redis or database)
+let cachedToken = null;
+let tokenExpiry = null;
+
+// Get OAuth token from FatSecret
+async function getAccessToken(scope = 'basic') {
   try {
-    const { query } = req.query;
-    
-    if (!query) {
-      return res.status(400).json({ 
-        code: 400, 
-        message: 'Search query is required' 
-      });
+    // Check if we have a valid cached token
+    if (cachedToken && tokenExpiry && new Date() < tokenExpiry) {
+      return cachedToken;
     }
-    
-    // Check cache first
-    const cacheKey = `food_search_${query}`;
-    const cachedResult = foodCache.get(cacheKey);
-    
-    if (cachedResult) {
-      console.log(`[CACHE HIT] Found cached result for "${query}"`);
-      return res.json(cachedResult);
-    }
-    
-    // Get access token
-    const accessToken = await getAccessToken();
-    
-    if (!accessToken) {
-      return res.status(500).json({ 
-        code: 500, 
-        message: 'Failed to authenticate with FatSecret API' 
-      });
-    }
-    
-    // Construct the FatSecret API URL
-    const params = new URLSearchParams({
-      method: 'foods.search',
-      search_expression: query,
-      format: 'json',
-      max_results: 50
-    });
-    
-    const apiUrl = `${process.env.FATSECRET_API_URL}?${params.toString()}`;
-    
-    // Make the request to FatSecret API
-    const response = await axios.get(apiUrl, {
-      headers: {
-        'Authorization': `Bearer ${accessToken}`,
-        'Accept': 'application/json'
-      }
-    });
-    
-    // Process and transform the response
-    const transformedResults = transformFoodResults(response.data);
-    
-    // Cache the results
-    foodCache.set(cacheKey, transformedResults);
-    
-    // Return the transformed results
-    res.json(transformedResults);
-    
-  } catch (error) {
-    console.error('Error searching for foods:', error.message);
-    
-    // Handle different error types
-    if (error.response) {
-      // The request was made and the server responded with a status code outside of 2xx
-      return res.status(error.response.status).json({
-        code: error.response.status,
-        message: error.response.data.message || 'Error from FatSecret API'
-      });
-    } else if (error.request) {
-      // The request was made but no response was received
-      return res.status(503).json({
-        code: 503,
-        message: 'No response from FatSecret API'
-      });
-    } else {
-      // Something happened in setting up the request
-      return res.status(500).json({
-        code: 500,
-        message: error.message || 'Unknown error occurred'
-      });
-    }
-  }
-});
 
-// Route to get food details
-app.get('/api/food/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
+    console.log('🔑 Requesting new FatSecret access token...');
     
-    // Check cache first
-    const cacheKey = `food_details_${id}`;
-    const cachedResult = foodCache.get(cacheKey);
-    
-    if (cachedResult) {
-      console.log(`[CACHE HIT] Found cached result for food ID "${id}"`);
-      return res.json(cachedResult);
-    }
-    
-    // Get access token
-    const accessToken = await getAccessToken();
-    
-    if (!accessToken) {
-      return res.status(500).json({ 
-        code: 500, 
-        message: 'Failed to authenticate with FatSecret API' 
-      });
-    }
-    
-    // Construct the FatSecret API URL
-    const params = new URLSearchParams({
-      method: 'food.get',
-      food_id: id,
-      format: 'json'
-    });
-    
-    const apiUrl = `${process.env.FATSECRET_API_URL}?${params.toString()}`;
-    
-    // Make the request to FatSecret API
-    const response = await axios.get(apiUrl, {
+    const response = await axios({
+      method: 'POST',
+      url: AUTH_URL,
       headers: {
-        'Authorization': `Bearer ${accessToken}`,
-        'Accept': 'application/json'
-      }
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: `grant_type=client_credentials&scope=${scope}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`,
     });
-    
-    // Process and transform the response
-    const transformedResult = transformFoodDetails(response.data);
-    
-    // Cache the result
-    foodCache.set(cacheKey, transformedResult);
-    
-    // Return the transformed result
-    res.json(transformedResult);
-    
-  } catch (error) {
-    console.error('Error getting food details:', error.message);
-    
-    // Handle different error types appropriately
-    if (error.response) {
-      return res.status(error.response.status).json({
-        code: error.response.status,
-        message: error.response.data.message || 'Error from FatSecret API'
-      });
-    } else if (error.request) {
-      return res.status(503).json({
-        code: 503,
-        message: 'No response from FatSecret API'
-      });
-    } else {
-      return res.status(500).json({
-        code: 500,
-        message: error.message || 'Unknown error occurred'
-      });
-    }
-  }
-});
 
-// Helper function to get access token (with caching)
-async function getAccessToken() {
-  // Check if we have a cached token
-  const cachedToken = tokenCache.get('access_token');
-  if (cachedToken) {
-    console.log('[CACHE HIT] Using cached access token');
+    cachedToken = response.data.access_token;
+    tokenExpiry = new Date(Date.now() + (response.data.expires_in * 1000));
+    
+    console.log('✅ Got new access token, expires at:', tokenExpiry);
     return cachedToken;
-  }
-  
-  try {
-    console.log('[CACHE MISS] Requesting new access token');
-    
-    // Prepare request for token
-    const params = new URLSearchParams();
-    params.append('grant_type', 'client_credentials');
-    params.append('scope', 'basic');
-    params.append('client_id', process.env.FATSECRET_CLIENT_ID);
-    params.append('client_secret', process.env.FATSECRET_CLIENT_SECRET);
-    
-    // Make the request
-    const response = await axios.post(process.env.FATSECRET_TOKEN_URL, params, {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    });
-    
-    // Cache the token for future requests
-    const { access_token, expires_in } = response.data;
-    tokenCache.set('access_token', access_token, expires_in - 100); // Set TTL slightly less than actual expiry
-    
-    return access_token;
   } catch (error) {
-    console.error('Error getting access token:', error.message);
-    return null;
+    console.error('❌ Error getting access token:', error.response?.data || error.message);
+    throw error;
   }
 }
 
-// Helper function to transform food search results
-function transformFoodResults(data) {
-  try {
-    const foodList = data.foods?.food || [];
-    
-    if (!Array.isArray(foodList)) {
-      // Handle case where only one food is returned
-      return [transformSingleFood(foodList)];
-    }
-    
-    return foodList.map(transformSingleFood);
-  } catch (error) {
-    console.error('Error transforming food results:', error.message);
-    return [];
+// Helper function to extract nutrition data from food description
+function extractCalories(description) {
+  const match = description.match(/Calories:\s*(\d+)/i);
+  return match ? parseInt(match[1]) : 0;
+}
+
+function extractNutrient(description, nutrientType) {
+  const patterns = {
+    'Protein': /Protein:\s*([\d.]+)g/i,
+    'Carbs': /Carbs:\s*([\d.]+)g/i,
+    'Fat': /Fat:\s*([\d.]+)g/i
+  };
+  
+  const pattern = patterns[nutrientType];
+  if (!pattern) return 0;
+  
+  const match = description.match(pattern);
+  return match ? parseFloat(match[1]) : 0;
+}
+
+function extractServingInfo(description) {
+  // Extract serving information from description
+  // Example: "Per 100g - Calories: 22kcal | Fat: 0.34g | Carbs: 3.28g | Protein: 3.09g"
+  const servingMatch = description.match(/Per\s+([\d.]+)\s*([a-zA-Z]+)/i);
+  
+  if (servingMatch) {
+    return {
+      size: parseFloat(servingMatch[1]),
+      unit: servingMatch[2],
+      text: `${servingMatch[1]} ${servingMatch[2]}`
+    };
   }
+  
+  // Default to 100g
+  return {
+    size: 100,
+    unit: 'g',
+    text: '100 g'
+  };
 }
 
 // Helper function to transform a single food item
@@ -266,110 +120,227 @@ function transformSingleFood(foodItem) {
   };
 }
 
-// Helper function to extract serving information
-function extractServingInfo(description) {
-  // Default values
-  let result = {
-    size: 100,
-    unit: 'g',
-    text: null
-  };
+// Helper function to transform detailed food data from food.get.v2
+function transformDetailedFood(foodData) {
+  const { food_id, food_name, brand_name, servings } = foodData;
   
-  // Try to extract standard "Per Xg" format first
-  const gramPattern = /Per (\d+)g/;
-  const gramMatch = description.match(gramPattern);
-  
-  if (gramMatch) {
-    result.size = parseInt(gramMatch[1]);
-    result.text = gramMatch[0];
-    return result;
+  // Get the first serving for nutrition data
+  let serving = null;
+  if (servings && servings.serving) {
+    if (Array.isArray(servings.serving)) {
+      serving = servings.serving[0];
+    } else {
+      serving = servings.serving;
+    }
   }
   
-  // Try more complex patterns like "Per 1/4 cup"
-  const complexPattern = /Per ([^-]+)/;
-  const complexMatch = description.match(complexPattern);
+  if (!serving) {
+    throw new Error('No serving information available');
+  }
   
-  if (complexMatch) {
-    const servingText = complexMatch[1].trim();
-    result.text = `Per ${servingText}`;
+  // Extract nutrition data
+  const calories = parseInt(serving.calories) || 0;
+  const protein = parseFloat(serving.protein) || 0;
+  const carbs = parseFloat(serving.carbohydrate) || 0;
+  const fat = parseFloat(serving.fat) || 0;
+  
+  // Get serving info
+  const metricAmount = parseFloat(serving.metric_serving_amount) || 100;
+  const metricUnit = serving.metric_serving_unit || 'g';
+  const servingDescription = serving.serving_description || `${metricAmount} ${metricUnit}`;
+  
+  // Scale nutrition to per 100g if needed
+  const scaleFactor = metricUnit.toLowerCase() === 'oz' ? 100 / (metricAmount * 28.3495) : 100 / metricAmount;
+  
+  return {
+    id: food_id,
+    name: food_name,
+    description: servingDescription,
+    food_type: brand_name ? 'Brand' : 'Generic',
+    brand_name: brand_name || null,
+    calories: Math.round(calories * scaleFactor),
+    protein: Math.round((protein * scaleFactor) * 10) / 10,
+    carbs: Math.round((carbs * scaleFactor) * 10) / 10,
+    fat: Math.round((fat * scaleFactor) * 10) / 10,
+    servingSize: metricUnit.toLowerCase() === 'oz' ? metricAmount * 28.3495 : metricAmount,
+    servingUnit: metricUnit.toLowerCase() === 'oz' ? 'g' : metricUnit,
+    servingText: servingDescription
+  };
+}
+
+// ROUTES
+
+// Health check endpoint
+app.get('/api/status', (req, res) => {
+  res.json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
+// Food search endpoint
+app.get('/api/food/search', async (req, res) => {
+  try {
+    const { query } = req.query;
     
-    // Check for standard measurements
-    if (servingText.includes('cup')) {
-      result.unit = 'cup';
+    if (!query) {
+      return res.status(400).json({ error: 'Query parameter is required' });
+    }
+    
+    console.log(`🔍 Searching for: ${query}`);
+    
+    const token = await getAccessToken('basic');
+    
+    const response = await axios({
+      method: 'POST',
+      url: API_URL,
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: `method=foods.search&search_expression=${encodeURIComponent(query)}&format=json&max_results=25`,
+    });
+    
+    const data = response.data;
+    
+    if (data.foods && data.foods.food) {
+      const foods = Array.isArray(data.foods.food) ? data.foods.food : [data.foods.food];
+      const transformedFoods = foods.map(transformSingleFood);
       
-      // Handle fractions like 1/4 cup
-      const fractionMatch = servingText.match(/(\d+)\/(\d+)/);
-      if (fractionMatch) {
-        result.size = parseInt(fractionMatch[1]) / parseInt(fractionMatch[2]);
-      } else {
-        // Handle whole numbers like 1 cup
-        const numberMatch = servingText.match(/(\d+)/);
-        if (numberMatch) {
-          result.size = parseInt(numberMatch[1]);
-        } else {
-          result.size = 1; // Default to 1 if no number found
-        }
-      }
-    } else if (servingText.includes('oz') || servingText.includes('ounce')) {
-      result.unit = 'oz';
-      
-      // Extract the number
-      const numberMatch = servingText.match(/(\d+)/);
-      if (numberMatch) {
-        result.size = parseInt(numberMatch[1]);
-      } else {
-        result.size = 1;
-      }
-    } else if (servingText.includes('tbsp') || servingText.includes('tablespoon')) {
-      result.unit = 'tbsp';
-      
-      // Extract the number
-      const numberMatch = servingText.match(/(\d+)/);
-      if (numberMatch) {
-        result.size = parseInt(numberMatch[1]);
-      } else {
-        result.size = 1;
-      }
-    } else if (servingText.includes('piece') || servingText.includes('cookie') || servingText.includes('serving')) {
-      result.unit = 'piece';
-      
-      // Extract the number
-      const numberMatch = servingText.match(/(\d+)/);
-      if (numberMatch) {
-        result.size = parseInt(numberMatch[1]);
-      } else {
-        result.size = 1;
+      console.log(`✅ Found ${transformedFoods.length} foods`);
+      res.json(transformedFoods);
+    } else {
+      console.log('📭 No foods found');
+      res.json([]);
+    }
+  } catch (error) {
+    console.error('❌ Food search error:', error.response?.data || error.message);
+    res.status(500).json({ 
+      error: 'Food search failed', 
+      details: error.response?.data || error.message 
+    });
+  }
+});
+
+// Food details endpoint
+app.get('/api/food/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    
+    console.log(`🔍 Getting food details for ID: ${id}`);
+    
+    const token = await getAccessToken('basic');
+    
+    const response = await axios({
+      method: 'POST',
+      url: API_URL,
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: `method=food.get.v2&food_id=${id}&format=json`,
+    });
+    
+    const data = response.data;
+    
+    if (data.food) {
+      const transformedFood = transformDetailedFood(data.food);
+      console.log(`✅ Got detailed food: ${transformedFood.name}`);
+      res.json(transformedFood);
+    } else {
+      console.log(`❌ Food not found for ID: ${id}`);
+      res.status(404).json({ error: 'Food not found' });
+    }
+  } catch (error) {
+    console.error('❌ Food details error:', error.response?.data || error.message);
+    res.status(500).json({ 
+      error: 'Food details lookup failed', 
+      details: error.response?.data || error.message 
+    });
+  }
+});
+
+// Barcode lookup endpoint
+app.get('/api/food/barcode/:barcode', async (req, res) => {
+  try {
+    const { barcode } = req.params;
+    const cleanBarcode = barcode.replace(/\D/g, ''); // Remove non-digits
+    
+    console.log(`🔍 Looking up barcode: ${cleanBarcode}`);
+    
+    const token = await getAccessToken('basic barcode');
+    
+    // Step 1: Get food ID from barcode
+    const barcodeResponse = await axios({
+      method: 'POST',
+      url: API_URL,
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: `method=food.find_id_for_barcode&barcode=${cleanBarcode}&format=json`,
+    });
+    
+    const barcodeData = barcodeResponse.data;
+    let foodId = null;
+    
+    // Extract food ID from response
+    if (barcodeData.food_id) {
+      if (typeof barcodeData.food_id === 'object' && barcodeData.food_id.value) {
+        foodId = barcodeData.food_id.value;
+      } else if (typeof barcodeData.food_id === 'string') {
+        foodId = barcodeData.food_id;
       }
     }
     
-    return result;
+    if (!foodId) {
+      console.log(`📭 No food found for barcode: ${cleanBarcode}`);
+      return res.status(404).json({ error: 'Barcode not found' });
+    }
+    
+    console.log(`✅ Found food ID: ${foodId} for barcode: ${cleanBarcode}`);
+    
+    // Step 2: Get detailed food information
+    const foodResponse = await axios({
+      method: 'POST',
+      url: API_URL,
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: `method=food.get.v2&food_id=${foodId}&format=json`,
+    });
+    
+    const foodData = foodResponse.data;
+    
+    if (foodData.food) {
+      const transformedFood = transformDetailedFood(foodData.food);
+      console.log(`✅ Got detailed food from barcode: ${transformedFood.name}`);
+      res.json(transformedFood);
+    } else {
+      console.log(`❌ Food details not found for ID: ${foodId}`);
+      res.status(404).json({ error: 'Food details not found' });
+    }
+  } catch (error) {
+    console.error('❌ Barcode lookup error:', error.response?.data || error.message);
+    
+    // Check if it's a "not found" error
+    if (error.response?.data && 
+        (error.response.data.toString().includes('not found') || 
+         error.response.data.toString().includes('No matches found'))) {
+      res.status(404).json({ error: 'Barcode not found in database' });
+    } else {
+      res.status(500).json({ 
+        error: 'Barcode lookup failed', 
+        details: error.response?.data || error.message 
+      });
+    }
   }
-  
-  // If no pattern matches, return default values
-  return result;
-}
+});
 
-// Helper function to transform detailed food information
-function transformFoodDetails(data) {
-  // Implementation would be similar to transformSingleFood but with more detailed information
-  return transformSingleFood(data.food);
-}
-
-// Helper function to extract calories
-function extractCalories(description) {
-  const pattern = /Calories:\s*(\d+)kcal/;
-  const match = description.match(pattern);
-  return match ? parseInt(match[1]) : 0;
-}
-
-// Helper function to extract nutrients
-function extractNutrient(description, type) {
-  const pattern = new RegExp(`${type}:\\s*(\\d+\\.?\\d*)g`);
-  const match = description.match(pattern);
-  return match ? parseFloat(match[1]) : 0;
-}
-
-// Start the server
+// Start server
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Proxy server running on port ${PORT}`);
+  console.log(`🚀 FatSecret Proxy Server running on port ${PORT}`);
+  console.log(`📡 Health check: http://localhost:${PORT}/api/status`);
+  console.log(`🔍 Food search: http://localhost:${PORT}/api/food/search?query=apple`);
+  console.log(`📋 Food details: http://localhost:${PORT}/api/food/123456`);
+  console.log(`📦 Barcode lookup: http://localhost:${PORT}/api/food/barcode/123456789012`);
 }); 
