@@ -199,6 +199,9 @@ app.get('/api/food/search', async (req, res) => {
     });
     
     const data = response.data;
+    console.log('📦 FatSecret response status:', response.status);
+    console.log('📦 FatSecret response headers:', JSON.stringify(response.headers, null, 2));
+    console.log('📦 FatSecret raw body:', JSON.stringify(data, null, 2));
     
     if (data.foods && data.foods.food) {
       const foods = Array.isArray(data.foods.food) ? data.foods.food : [data.foods.food];
@@ -211,7 +214,13 @@ app.get('/api/food/search', async (req, res) => {
       res.json([]);
     }
   } catch (error) {
-    console.error('❌ Food search error:', error.response?.data || error.message);
+    if (error.response) {
+      console.error('❌ Food search error status:', error.response.status);
+      console.error('❌ Food search error headers:', JSON.stringify(error.response.headers, null, 2));
+      console.error('❌ Food search error body:', JSON.stringify(error.response.data, null, 2));
+    } else {
+      console.error('❌ Food search error:', error.message);
+    }
     res.status(500).json({ 
       error: 'Food search failed', 
       details: error.response?.data || error.message 
