@@ -6,6 +6,7 @@ const app = express();
 // Enable CORS for all origins
 app.use(cors());
 app.use(express.json());
+app.use('/content', express.static('content'));
 
 // FatSecret API credentials
 const CLIENT_ID = '8ffd10d7d66c4ac5aba9bf5b2c433e4a';
