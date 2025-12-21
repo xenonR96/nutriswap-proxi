@@ -12,8 +12,7 @@
           "id": "breakfast_bad_0",
           "type": "badFood",
           "food": {
-            "name": "Frosted Donuts",
-            "nameKey": "food.frosted_donuts",
+            "name": "Beignets Glacés",
             "calories": 494,
             "protein": 4.7,
             "carbs": 58.8,
@@ -26,8 +25,7 @@
           "id": "breakfast_bad_1",
           "type": "badFood",
           "food": {
-            "name": "Chocolate Muffin",
-            "nameKey": "food.chocolate_muffin",
+            "name": "Muffin au Chocolat",
             "calories": 317,
             "protein": 4.2,
             "carbs": 45.8,
@@ -40,8 +38,7 @@
           "id": "breakfast_bad_2",
           "type": "badFood",
           "food": {
-            "name": "Sugary Cereal",
-            "nameKey": "food.sugary_cereal",
+            "name": "Céréales Sucrées",
             "calories": 389,
             "protein": 3.3,
             "carbs": 77.8,
@@ -54,8 +51,7 @@
           "id": "breakfast_bad_3",
           "type": "badFood",
           "food": {
-            "name": "Bacon & Egg Sandwich",
-            "nameKey": "food.bacon_egg_sandwich",
+            "name": "Sandwich Bacon Œuf",
             "calories": 300,
             "protein": 12.0,
             "carbs": 23.3,
@@ -68,8 +64,7 @@
           "id": "breakfast_bad_4",
           "type": "badFood",
           "food": {
-            "name": "Butter Croissant",
-            "nameKey": "food.butter_croissant",
+            "name": "Croissant au Beurre",
             "calories": 457,
             "protein": 8.6,
             "carbs": 48.6,
@@ -82,8 +77,7 @@
           "id": "breakfast_bad_5",
           "type": "badFood",
           "food": {
-            "name": "Syrup Pancakes",
-            "nameKey": "food.syrup_pancakes",
+            "name": "Pancakes au Sirop",
             "calories": 260,
             "protein": 4.0,
             "carbs": 42.5,
@@ -97,7 +91,6 @@
           "type": "badFood",
           "food": {
             "name": "Frappuccino",
-            "nameKey": "food.frappuccino",
             "calories": 117,
             "protein": 1.7,
             "carbs": 18.6,
@@ -110,8 +103,7 @@
           "id": "breakfast_bad_7",
           "type": "badFood",
           "food": {
-            "name": "Sausage McMuffin",
-            "nameKey": null,
+            "name": "McMuffin à la Saucisse",
             "calories": 342,
             "protein": 12.0,
             "carbs": 24.8,
@@ -125,7 +117,6 @@
           "type": "badFood",
           "food": {
             "name": "Churros",
-            "nameKey": null,
             "calories": 412,
             "protein": 5.3,
             "carbs": 55.3,
@@ -138,8 +129,7 @@
           "id": "breakfast_bad_9",
           "type": "badFood",
           "food": {
-            "name": "Cookie Pack",
-            "nameKey": null,
+            "name": "Paquet de Cookies",
             "calories": 475,
             "protein": 5.0,
             "carbs": 65.0,
@@ -152,8 +142,7 @@
           "id": "breakfast_bad_10",
           "type": "badFood",
           "food": {
-            "name": "Nutella Toast",
-            "nameKey": null,
+            "name": "Toast au Nutella",
             "calories": 438,
             "protein": 8.8,
             "carbs": 52.5,
@@ -166,8 +155,7 @@
           "id": "breakfast_bad_11",
           "type": "badFood",
           "food": {
-            "name": "Cinnamon Roll",
-            "nameKey": null,
+            "name": "Brioche à la Cannelle",
             "calories": 420,
             "protein": 6.0,
             "carbs": 60.0,
@@ -181,7 +169,6 @@
           "type": "badFood",
           "food": {
             "name": "Pop-Tarts",
-            "nameKey": null,
             "calories": 396,
             "protein": 4.2,
             "carbs": 75.0,
@@ -194,8 +181,7 @@
           "id": "breakfast_bad_13",
           "type": "badFood",
           "food": {
-            "name": "Orange Juice (Carton)",
-            "nameKey": null,
+            "name": "Jus d'Orange (Brique)",
             "calories": 44,
             "protein": 0.6,
             "carbs": 10.0,
@@ -216,7 +202,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Breakfast Burrito (bacon & cheese)",
+              "name": "Burrito Petit-déj (bacon fromage)",
               "emoji": "🌯",
               "calories": 620,
               "protein": 24.0,
@@ -225,7 +211,7 @@
               "defaultQuantity": 250
             },
             "alternative": {
-              "name": "Egg White Veggie Burrito",
+              "name": "Burrito Blanc d'Œuf aux Légumes",
               "emoji": "🌯",
               "calories": 279,
               "protein": 20.5,
@@ -280,7 +266,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Waffles with Syrup & Whip",
+              "name": "Gaufres au Sirop et Chantilly",
               "emoji": "🧇",
               "calories": 560,
               "protein": 10.0,
@@ -289,7 +275,7 @@
               "defaultQuantity": 180
             },
             "alternative": {
-              "name": "Whole-Grain Waffle with Greek Yogurt & Berries",
+              "name": "Gaufre Complète au Yaourt Grec et Fruits Rouges",
               "emoji": "🧇",
               "calories": 275,
               "protein": 15.2,
@@ -339,7 +325,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Cinnamon Roll",
+              "name": "Brioche à la Cannelle",
               "emoji": "🍩",
               "calories": 480,
               "protein": 6.0,
@@ -348,7 +334,7 @@
               "defaultQuantity": 110
             },
             "alternative": {
-              "name": "Skyr with Apple & Cinnamon",
+              "name": "Skyr à la Pomme et Cannelle",
               "emoji": "🥣",
               "calories": 130,
               "protein": 16.7,
@@ -397,7 +383,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Sausage Biscuit",
+              "name": "Biscuit à la Saucisse",
               "emoji": "🥓",
               "calories": 520,
               "protein": 16.0,
@@ -406,7 +392,7 @@
               "defaultQuantity": 140
             },
             "alternative": {
-              "name": "Eggs on Whole-Grain Toast with Tomato",
+              "name": "Œufs sur Toast Complet à la Tomate",
               "emoji": "🍳",
               "calories": 344,
               "protein": 18.9,
@@ -456,7 +442,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Toaster Pastry",
+              "name": "Pâtisserie Grillée",
               "emoji": "🥧",
               "calories": 400,
               "protein": 4.0,
@@ -465,7 +451,7 @@
               "defaultQuantity": 50
             },
             "alternative": {
-              "name": "Chia Pudding with Berries",
+              "name": "Pudding de Chia aux Fruits Rouges",
               "emoji": "🥣",
               "calories": 235,
               "protein": 6.2,
@@ -513,7 +499,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Bottled Fruit Smoothie (sweetened)",
+              "name": "Smoothie Sucré (Bouteille)",
               "emoji": "🥤",
               "calories": 380,
               "protein": 5.0,
@@ -522,7 +508,7 @@
               "defaultQuantity": 350
             },
             "alternative": {
-              "name": "Protein Smoothie (banana, spinach)",
+              "name": "Smoothie Protéiné (Banane, Épinards)",
               "emoji": "🥤",
               "calories": 243,
               "protein": 27.2,
@@ -570,7 +556,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Large Orange Juice",
+              "name": "Grand Jus d'Orange",
               "emoji": "🧃",
               "calories": 260,
               "protein": 3.0,
@@ -579,7 +565,7 @@
               "defaultQuantity": 350
             },
             "alternative": {
-              "name": "Whole Orange with 10 Almonds",
+              "name": "Orange Entière avec 10 Amandes",
               "emoji": "🍊",
               "calories": 148,
               "protein": 4.3,
@@ -603,7 +589,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Danish Pastry",
+              "name": "Viennoiserie Danoise",
               "emoji": "🥮",
               "calories": 450,
               "protein": 7.0,
@@ -612,7 +598,7 @@
               "defaultQuantity": 90
             },
             "alternative": {
-              "name": "Cottage Cheese Bowl with Pineapple",
+              "name": "Bol de Fromage Blanc à l'Ananas",
               "emoji": "🧀",
               "calories": 221,
               "protein": 20.5,
@@ -664,8 +650,7 @@
           "id": "lunch_bad_0",
           "type": "badFood",
           "food": {
-            "name": "Fast Food Burger",
-            "nameKey": null,
+            "name": "Burger Fast-Food",
             "calories": 296,
             "protein": 11.4,
             "carbs": 20.5,
@@ -678,8 +663,7 @@
           "id": "lunch_bad_1",
           "type": "badFood",
           "food": {
-            "name": "Fried Chicken Sandwich",
-            "nameKey": null,
+            "name": "Sandwich Poulet Frit",
             "calories": 290,
             "protein": 14.0,
             "carbs": 25.0,
@@ -692,8 +676,7 @@
           "id": "lunch_bad_2",
           "type": "badFood",
           "food": {
-            "name": "Pepperoni Pizza Slice",
-            "nameKey": null,
+            "name": "Part de Pizza Pepperoni",
             "calories": 291,
             "protein": 10.9,
             "carbs": 27.3,
@@ -706,8 +689,7 @@
           "id": "lunch_bad_3",
           "type": "badFood",
           "food": {
-            "name": "Large French Fries",
-            "nameKey": null,
+            "name": "Grande Frites",
             "calories": 320,
             "protein": 4.0,
             "carbs": 43.3,
@@ -720,8 +702,7 @@
           "id": "lunch_bad_4",
           "type": "badFood",
           "food": {
-            "name": "Hot Dog with Bun",
-            "nameKey": null,
+            "name": "Hot-Dog",
             "calories": 450,
             "protein": 15.0,
             "carbs": 35.0,
@@ -734,8 +715,7 @@
           "id": "lunch_bad_5",
           "type": "badFood",
           "food": {
-            "name": "Deli Ham & Cheese Sandwich",
-            "nameKey": null,
+            "name": "Sandwich Jambon Fromage",
             "calories": 289,
             "protein": 11.1,
             "carbs": 26.7,
@@ -748,8 +728,7 @@
           "id": "lunch_bad_6",
           "type": "badFood",
           "food": {
-            "name": "Creamy Alfredo Pasta",
-            "nameKey": null,
+            "name": "Pâtes Alfredo à la Crème",
             "calories": 257,
             "protein": 7.9,
             "carbs": 28.6,
@@ -762,8 +741,7 @@
           "id": "lunch_bad_7",
           "type": "badFood",
           "food": {
-            "name": "Fried Dumplings",
-            "nameKey": null,
+            "name": "Raviolis Frits",
             "calories": 256,
             "protein": 7.5,
             "carbs": 23.8,
@@ -776,8 +754,7 @@
           "id": "lunch_bad_8",
           "type": "badFood",
           "food": {
-            "name": "Grilled Cheese Sandwich",
-            "nameKey": null,
+            "name": "Croque-Monsieur",
             "calories": 333,
             "protein": 10.0,
             "carbs": 27.5,
@@ -798,7 +775,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Meatball Sub",
+              "name": "Sub aux Boulettes",
               "emoji": "🥖",
               "calories": 650,
               "protein": 28.0,
@@ -807,7 +784,7 @@
               "defaultQuantity": 280
             },
             "alternative": {
-              "name": "Turkey Avocado on Whole Grain",
+              "name": "Dinde Avocat sur Pain Complet",
               "emoji": "🥗",
               "calories": 368,
               "protein": 34.4,
@@ -858,7 +835,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Chicken Quesadilla",
+              "name": "Quesadilla au Poulet",
               "emoji": "🌯",
               "calories": 620,
               "protein": 30.0,
@@ -867,7 +844,7 @@
               "defaultQuantity": 220
             },
             "alternative": {
-              "name": "Black Bean Burrito Bowl",
+              "name": "Bowl Burrito aux Haricots Noirs",
               "emoji": "🥙",
               "calories": 305,
               "protein": 14.4,
@@ -918,7 +895,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Chili Cheese Fries",
+              "name": "Frites au Chili et Fromage",
               "emoji": "🍟",
               "calories": 700,
               "protein": 16.0,
@@ -927,7 +904,7 @@
               "defaultQuantity": 200
             },
             "alternative": {
-              "name": "Roasted Potatoes with Greek Yogurt Dip",
+              "name": "Pommes de Terre Rôties au Yaourt Grec",
               "emoji": "🥔",
               "calories": 210,
               "protein": 11.3,
@@ -977,7 +954,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Buffalo Wings (10 pcs)",
+              "name": "Ailes de Poulet Buffalo (10 pcs)",
               "emoji": "🍗",
               "calories": 780,
               "protein": 50.0,
@@ -986,7 +963,7 @@
               "defaultQuantity": 250
             },
             "alternative": {
-              "name": "Grilled Chicken Skewers + Side Salad",
+              "name": "Brochettes de Poulet Grillé + Salade",
               "emoji": "🍢",
               "calories": 324,
               "protein": 47.5,
@@ -1036,7 +1013,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Bacon Mac & Cheese",
+              "name": "Mac & Cheese au Bacon",
               "emoji": "🧀",
               "calories": 740,
               "protein": 24.0,
@@ -1045,7 +1022,7 @@
               "defaultQuantity": 300
             },
             "alternative": {
-              "name": "Chickpea Pasta with Tomato & Basil",
+              "name": "Pâtes aux Pois Chiches, Tomate et Basilic",
               "emoji": "🍝",
               "calories": 341,
               "protein": 18.3,
@@ -1106,7 +1083,7 @@
               "defaultQuantity": 400
             },
             "alternative": {
-              "name": "Baked White Fish with Quinoa Salad",
+              "name": "Poisson Blanc au Four avec Salade de Quinoa",
               "emoji": "🐟",
               "calories": 339,
               "protein": 34.1,
@@ -1157,7 +1134,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Sausage Roll",
+              "name": "Feuilleté à la Saucisse",
               "emoji": "🥐",
               "calories": 520,
               "protein": 16.0,
@@ -1166,7 +1143,7 @@
               "defaultQuantity": 140
             },
             "alternative": {
-              "name": "Turkey Spinach Whole-Wheat Wrap",
+              "name": "Wrap Complet Dinde Épinards",
               "emoji": "🥙",
               "calories": 367,
               "protein": 33.3,
@@ -1215,7 +1192,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Orange Chicken with White Rice",
+              "name": "Poulet à l'Orange et Riz Blanc",
               "emoji": "🍜",
               "calories": 780,
               "protein": 35.0,
@@ -1224,7 +1201,7 @@
               "defaultQuantity": 350
             },
             "alternative": {
-              "name": "Tofu Broccoli Stir-Fry with Brown Rice",
+              "name": "Sauté de Tofu Brocoli au Riz Complet",
               "emoji": "🥦",
               "calories": 262,
               "protein": 13.9,
@@ -1283,8 +1260,7 @@
           "id": "snack_bad_0",
           "type": "badFood",
           "food": {
-            "name": "Potato Chips",
-            "nameKey": null,
+            "name": "Chips",
             "calories": 536,
             "protein": 7.0,
             "carbs": 53.0,
@@ -1297,8 +1273,7 @@
           "id": "snack_bad_1",
           "type": "badFood",
           "food": {
-            "name": "Candy Bar",
-            "nameKey": null,
+            "name": "Barre Chocolatée",
             "calories": 500,
             "protein": 6.0,
             "carbs": 60.0,
@@ -1312,7 +1287,6 @@
           "type": "badFood",
           "food": {
             "name": "Cookies",
-            "nameKey": null,
             "calories": 488,
             "protein": 5.5,
             "carbs": 64.0,
@@ -1325,8 +1299,7 @@
           "id": "snack_bad_3",
           "type": "badFood",
           "food": {
-            "name": "Soda & Crackers",
-            "nameKey": null,
+            "name": "Soda et Crackers",
             "calories": 66,
             "protein": 1.0,
             "carbs": 16.0,
@@ -1339,8 +1312,7 @@
           "id": "snack_bad_4",
           "type": "badFood",
           "food": {
-            "name": "Movie Theater Popcorn (buttered)",
-            "nameKey": null,
+            "name": "Popcorn Cinéma (Beurré)",
             "calories": 500,
             "protein": 9.0,
             "carbs": 52.0,
@@ -1353,8 +1325,7 @@
           "id": "snack_bad_5",
           "type": "badFood",
           "food": {
-            "name": "Cheese Nachos",
-            "nameKey": null,
+            "name": "Nachos au Fromage",
             "calories": 330,
             "protein": 7.0,
             "carbs": 35.0,
@@ -1367,8 +1338,7 @@
           "id": "snack_bad_6",
           "type": "badFood",
           "food": {
-            "name": "Glazed Donut (snack)",
-            "nameKey": null,
+            "name": "Donut Glacé",
             "calories": 420,
             "protein": 5.0,
             "carbs": 47.0,
@@ -1381,8 +1351,7 @@
           "id": "snack_bad_7",
           "type": "badFood",
           "food": {
-            "name": "Packaged Snack Cakes",
-            "nameKey": null,
+            "name": "Gâteaux Emballés",
             "calories": 380,
             "protein": 3.5,
             "carbs": 58.0,
@@ -1396,7 +1365,6 @@
           "type": "badFood",
           "food": {
             "name": "S'mores",
-            "nameKey": null,
             "calories": 460,
             "protein": 5.0,
             "carbs": 74.0,
@@ -1409,8 +1377,7 @@
           "id": "snack_bad_9",
           "type": "badFood",
           "food": {
-            "name": "PB&J Sandwich",
-            "nameKey": null,
+            "name": "Sandwich Beurre de Cacahuète Confiture",
             "calories": 360,
             "protein": 11.0,
             "carbs": 45.0,
@@ -1431,7 +1398,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Ice Cream Sundae",
+              "name": "Coupe Glacée",
               "emoji": "🍦",
               "calories": 450,
               "protein": 6.0,
@@ -1440,7 +1407,7 @@
               "defaultQuantity": 180
             },
             "alternative": {
-              "name": "High-Protein Frozen Yogurt Cup",
+              "name": "Yaourt Glacé Hyperprotéiné",
               "emoji": "🍧",
               "calories": 194,
               "protein": 18.2,
@@ -1487,7 +1454,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Chocolate Milkshake",
+              "name": "Milkshake Chocolat",
               "emoji": "🥤",
               "calories": 520,
               "protein": 10.0,
@@ -1496,7 +1463,7 @@
               "defaultQuantity": 400
             },
             "alternative": {
-              "name": "Protein Shake with Banana",
+              "name": "Shake Protéiné à la Banane",
               "emoji": "🥤",
               "calories": 276,
               "protein": 32.3,
@@ -1543,7 +1510,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Soft Pretzel with Cheese Dip",
+              "name": "Bretzel Moelleux au Fromage",
               "emoji": "🥨",
               "calories": 480,
               "protein": 12.0,
@@ -1552,7 +1519,7 @@
               "defaultQuantity": 160
             },
             "alternative": {
-              "name": "Whole-Grain Crackers with Light Cheese",
+              "name": "Crackers Complets au Fromage Allégé",
               "emoji": "🧀",
               "calories": 176,
               "protein": 9.5,
@@ -1576,7 +1543,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Buttered Garlic Breadsticks",
+              "name": "Gressins au Beurre et Ail",
               "emoji": "🧈",
               "calories": 380,
               "protein": 8.0,
@@ -1585,7 +1552,7 @@
               "defaultQuantity": 90
             },
             "alternative": {
-              "name": "Whole-Wheat Pita with Hummus",
+              "name": "Pita Complet au Houmous",
               "emoji": "🥙",
               "calories": 229,
               "protein": 7.6,
@@ -1609,7 +1576,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Fried Mozzarella Sticks",
+              "name": "Bâtonnets de Mozzarella Frits",
               "emoji": "🧀",
               "calories": 540,
               "protein": 20.0,
@@ -1618,7 +1585,7 @@
               "defaultQuantity": 150
             },
             "alternative": {
-              "name": "Low-Carb Quesadilla (Low-Fat Cheese)",
+              "name": "Quesadilla Low-Carb (Fromage Allégé)",
               "emoji": "🌮",
               "calories": 280,
               "protein": 22.0,
@@ -1665,7 +1632,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Fried Spring Rolls",
+              "name": "Rouleaux de Printemps Frits",
               "emoji": "🥟",
               "calories": 420,
               "protein": 8.0,
@@ -1674,7 +1641,7 @@
               "defaultQuantity": 120
             },
             "alternative": {
-              "name": "Fresh Rice Paper Rolls (Veggies & Shrimp)",
+              "name": "Rouleaux de Riz Frais (Légumes et Crevettes)",
               "emoji": "🥗",
               "calories": 187,
               "protein": 16.8,
@@ -1723,7 +1690,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Chocolate Croissant",
+              "name": "Pain au Chocolat",
               "emoji": "🥐",
               "calories": 350,
               "protein": 7.0,
@@ -1732,7 +1699,7 @@
               "defaultQuantity": 70
             },
             "alternative": {
-              "name": "Greek Yogurt Parfait with Berries",
+              "name": "Parfait au Yaourt Grec et Fruits Rouges",
               "emoji": "🍓",
               "calories": 203,
               "protein": 17.3,
@@ -1779,7 +1746,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Caramel Latte",
+              "name": "Latte Caramel",
               "emoji": "☕",
               "calories": 320,
               "protein": 9.0,
@@ -1788,7 +1755,7 @@
               "defaultQuantity": 355
             },
             "alternative": {
-              "name": "Americano with a Splash of Milk",
+              "name": "Americano avec une Goutte de Lait",
               "emoji": "☕",
               "calories": 7,
               "protein": 0.7,
@@ -1818,8 +1785,7 @@
           "id": "dinner_bad_0",
           "type": "badFood",
           "food": {
-            "name": "Fried Chicken & Fries",
-            "nameKey": null,
+            "name": "Poulet Frit et Frites",
             "calories": 273,
             "protein": 11.7,
             "carbs": 20.0,
@@ -1832,8 +1798,7 @@
           "id": "dinner_bad_1",
           "type": "badFood",
           "food": {
-            "name": "Creamy Pasta",
-            "nameKey": null,
+            "name": "Pâtes à la Crème",
             "calories": 243,
             "protein": 7.1,
             "carbs": 26.8,
@@ -1846,8 +1811,7 @@
           "id": "dinner_bad_2",
           "type": "badFood",
           "food": {
-            "name": "Loaded Nachos",
-            "nameKey": null,
+            "name": "Nachos Garnis",
             "calories": 300,
             "protein": 7.2,
             "carbs": 26.0,
@@ -1860,8 +1824,7 @@
           "id": "dinner_bad_3",
           "type": "badFood",
           "food": {
-            "name": "Deep Dish Pizza",
-            "nameKey": null,
+            "name": "Pizza Épaisse",
             "calories": 343,
             "protein": 12.9,
             "carbs": 32.1,
@@ -1874,8 +1837,7 @@
           "id": "dinner_bad_4",
           "type": "badFood",
           "food": {
-            "name": "Steak with Mashed Potatoes & Butter",
-            "nameKey": null,
+            "name": "Steak Purée au Beurre",
             "calories": 223,
             "protein": 11.4,
             "carbs": 14.3,
@@ -1888,8 +1850,7 @@
           "id": "dinner_bad_5",
           "type": "badFood",
           "food": {
-            "name": "Beef Tacos with Sour Cream",
-            "nameKey": null,
+            "name": "Tacos Bœuf à la Crème Aigre",
             "calories": 300,
             "protein": 11.0,
             "carbs": 27.5,
@@ -1902,8 +1863,7 @@
           "id": "dinner_bad_6",
           "type": "badFood",
           "food": {
-            "name": "Ramen Noodles (Instant)",
-            "nameKey": null,
+            "name": "Nouilles Instantanées",
             "calories": 612,
             "protein": 14.1,
             "carbs": 76.5,
@@ -1916,8 +1876,7 @@
           "id": "dinner_bad_7",
           "type": "badFood",
           "food": {
-            "name": "Fried Dumpling Platter",
-            "nameKey": null,
+            "name": "Assiette de Raviolis Frits",
             "calories": 267,
             "protein": 8.3,
             "carbs": 24.2,
@@ -1930,8 +1889,7 @@
           "id": "dinner_bad_8",
           "type": "badFood",
           "food": {
-            "name": "Meat Pie",
-            "nameKey": null,
+            "name": "Tourte à la Viande",
             "calories": 260,
             "protein": 8.8,
             "carbs": 22.0,
@@ -1944,8 +1902,7 @@
           "id": "dinner_bad_9",
           "type": "badFood",
           "food": {
-            "name": "Fried Shrimp Basket",
-            "nameKey": null,
+            "name": "Panier de Crevettes Frites",
             "calories": 257,
             "protein": 10.0,
             "carbs": 22.1,
@@ -1958,8 +1915,7 @@
           "id": "dinner_bad_10",
           "type": "badFood",
           "food": {
-            "name": "Philly Cheesesteak Sandwich",
-            "nameKey": null,
+            "name": "Sandwich Philly Cheesesteak",
             "calories": 263,
             "protein": 11.3,
             "carbs": 21.3,
@@ -1989,7 +1945,7 @@
               "defaultQuantity": 280
             },
             "alternative": {
-              "name": "Grilled Turkey Burger Lettuce Wrap",
+              "name": "Burger de Dinde Grillé en Feuille de Laitue",
               "emoji": "🥗",
               "calories": 209,
               "protein": 37.1,
@@ -2039,7 +1995,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Lasagna with Meat & Cheese",
+              "name": "Lasagnes Viande et Fromage",
               "emoji": "🍝",
               "calories": 640,
               "protein": 28.0,
@@ -2048,7 +2004,7 @@
               "defaultQuantity": 300
             },
             "alternative": {
-              "name": "Eggplant Parmesan with Side Salad",
+              "name": "Aubergines Parmigiana avec Salade",
               "emoji": "🍆",
               "calories": 165,
               "protein": 10.4,
@@ -2099,7 +2055,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Chicken Curry with Cream Sauce",
+              "name": "Curry de Poulet à la Crème",
               "emoji": "🍛",
               "calories": 700,
               "protein": 35.0,
@@ -2108,7 +2064,7 @@
               "defaultQuantity": 350
             },
             "alternative": {
-              "name": "Chickpea & Spinach Curry with Brown Rice",
+              "name": "Curry de Pois Chiches et Épinards au Riz Complet",
               "emoji": "🍛",
               "calories": 319,
               "protein": 14.2,
@@ -2160,7 +2116,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "General Tso's Chicken with Fried Rice",
+              "name": "Poulet Général Tso avec Riz Frit",
               "emoji": "🥟",
               "calories": 850,
               "protein": 40.0,
@@ -2169,7 +2125,7 @@
               "defaultQuantity": 400
             },
             "alternative": {
-              "name": "Chicken & Broccoli Stir Fry with Quinoa",
+              "name": "Sauté de Poulet Brocoli au Quinoa",
               "emoji": "🥦",
               "calories": 387,
               "protein": 43.8,
@@ -2221,7 +2177,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Chili Cheese Hot Dog",
+              "name": "Hot-Dog Chili Cheese",
               "emoji": "🌭",
               "calories": 550,
               "protein": 20.0,
@@ -2230,7 +2186,7 @@
               "defaultQuantity": 140
             },
             "alternative": {
-              "name": "Grilled Turkey Sausage with Veggies",
+              "name": "Saucisse de Dinde Grillée aux Légumes",
               "emoji": "🥒",
               "calories": 288,
               "protein": 17.1,
@@ -2279,7 +2235,7 @@
           "type": "swapExample",
           "swap": {
             "original": {
-              "name": "Fried Tempura Sushi Roll",
+              "name": "Maki Tempura Frit",
               "emoji": "🍣",
               "calories": 480,
               "protein": 14.0,
@@ -2288,7 +2244,7 @@
               "defaultQuantity": 180
             },
             "alternative": {
-              "name": "Salmon & Avocado Sushi Roll",
+              "name": "Maki Saumon Avocat",
               "emoji": "🍣",
               "calories": 320,
               "protein": 16.2,
