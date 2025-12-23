@@ -1,0 +1,2297 @@
+{
+  "version": "1.0.0",
+  "language": "es",
+  "updatedAt": "2025-01-15T10:00:00Z",
+  "collections": [
+    {
+      "id": "breakfast_bad",
+      "title": "⚠️ Cambia estos Desayunos",
+      "category": "breakfast",
+      "items": [
+        {
+          "id": "breakfast_bad_0",
+          "type": "badFood",
+          "food": {
+            "name": "Donas Glaseadas",
+            "calories": 494,
+            "protein": 4.7,
+            "carbs": 58.8,
+            "fat": 25.9,
+            "defaultQuantity": 85,
+            "emoji": "🍩"
+          }
+        },
+        {
+          "id": "breakfast_bad_1",
+          "type": "badFood",
+          "food": {
+            "name": "Muffin de Chocolate",
+            "calories": 317,
+            "protein": 4.2,
+            "carbs": 45.8,
+            "fat": 13.3,
+            "defaultQuantity": 120,
+            "emoji": "🧁"
+          }
+        },
+        {
+          "id": "breakfast_bad_2",
+          "type": "badFood",
+          "food": {
+            "name": "Cereales Azucarados",
+            "calories": 389,
+            "protein": 3.3,
+            "carbs": 77.8,
+            "fat": 8.9,
+            "defaultQuantity": 90,
+            "emoji": "🥣"
+          }
+        },
+        {
+          "id": "breakfast_bad_3",
+          "type": "badFood",
+          "food": {
+            "name": "Sándwich de Tocino y Huevo",
+            "calories": 300,
+            "protein": 12.0,
+            "carbs": 23.3,
+            "fat": 18.7,
+            "defaultQuantity": 150,
+            "emoji": "🥓"
+          }
+        },
+        {
+          "id": "breakfast_bad_4",
+          "type": "badFood",
+          "food": {
+            "name": "Croissant de Mantequilla",
+            "calories": 457,
+            "protein": 8.6,
+            "carbs": 48.6,
+            "fat": 25.7,
+            "defaultQuantity": 70,
+            "emoji": "🥐"
+          }
+        },
+        {
+          "id": "breakfast_bad_5",
+          "type": "badFood",
+          "food": {
+            "name": "Panqueques con Jarabe",
+            "calories": 260,
+            "protein": 4.0,
+            "carbs": 42.5,
+            "fat": 8.0,
+            "defaultQuantity": 200,
+            "emoji": "🥞"
+          }
+        },
+        {
+          "id": "breakfast_bad_6",
+          "type": "badFood",
+          "food": {
+            "name": "Frappuccino",
+            "calories": 117,
+            "protein": 1.7,
+            "carbs": 18.6,
+            "fat": 4.0,
+            "defaultQuantity": 350,
+            "emoji": "🥤"
+          }
+        },
+        {
+          "id": "breakfast_bad_7",
+          "type": "badFood",
+          "food": {
+            "name": "McMuffin de Salchicha",
+            "calories": 342,
+            "protein": 12.0,
+            "carbs": 24.8,
+            "fat": 22.2,
+            "defaultQuantity": 117,
+            "emoji": "🥯"
+          }
+        },
+        {
+          "id": "breakfast_bad_8",
+          "type": "badFood",
+          "food": {
+            "name": "Churros",
+            "calories": 412,
+            "protein": 5.3,
+            "carbs": 55.3,
+            "fat": 22.0,
+            "defaultQuantity": 85,
+            "emoji": null
+          }
+        },
+        {
+          "id": "breakfast_bad_9",
+          "type": "badFood",
+          "food": {
+            "name": "Paquete de Galletas",
+            "calories": 475,
+            "protein": 5.0,
+            "carbs": 65.0,
+            "fat": 22.5,
+            "defaultQuantity": 80,
+            "emoji": "🍪"
+          }
+        },
+        {
+          "id": "breakfast_bad_10",
+          "type": "badFood",
+          "food": {
+            "name": "Tostada con Nutella",
+            "calories": 438,
+            "protein": 8.8,
+            "carbs": 52.5,
+            "fat": 22.5,
+            "defaultQuantity": 80,
+            "emoji": "🍫"
+          }
+        },
+        {
+          "id": "breakfast_bad_11",
+          "type": "badFood",
+          "food": {
+            "name": "Rollo de Canela",
+            "calories": 420,
+            "protein": 6.0,
+            "carbs": 60.0,
+            "fat": 18.0,
+            "defaultQuantity": 100,
+            "emoji": "🥯"
+          }
+        },
+        {
+          "id": "breakfast_bad_12",
+          "type": "badFood",
+          "food": {
+            "name": "Pop-Tarts",
+            "calories": 396,
+            "protein": 4.2,
+            "carbs": 75.0,
+            "fat": 10.4,
+            "defaultQuantity": 96,
+            "emoji": "🥧"
+          }
+        },
+        {
+          "id": "breakfast_bad_13",
+          "type": "badFood",
+          "food": {
+            "name": "Jugo de Naranja (Cartón)",
+            "calories": 44,
+            "protein": 0.6,
+            "carbs": 10.0,
+            "fat": 0.1,
+            "defaultQuantity": 500,
+            "emoji": "🥤"
+          }
+        }
+      ]
+    },
+    {
+      "id": "breakfast_swaps",
+      "title": "✨ Cambios Inteligentes para el Desayuno",
+      "category": "breakfast",
+      "items": [
+        {
+          "id": "breakfast_swap_0",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Burrito de Desayuno (tocino y queso)",
+              "emoji": "🌯",
+              "calories": 620,
+              "protein": 24.0,
+              "carbs": 55.0,
+              "fat": 34.0,
+              "defaultQuantity": 250
+            },
+            "alternative": {
+              "name": "Burrito de Claras con Verduras",
+              "emoji": "🌯",
+              "calories": 279,
+              "protein": 20.5,
+              "carbs": 37.9,
+              "fat": 4.5,
+              "defaultQuantity": 285
+            },
+            "summary": [
+              "~55% fewer calories",
+              "Less saturated fat",
+              "More fiber from veggies"
+            ],
+            "featuredInsight": "Replacing bacon and cheese with egg whites and vegetables slashes calories and saturated fat while keeping protein high and adding fiber.",
+            "description": "Made with whole-food ingredients like egg whites, fresh vegetables, and whole-wheat tortilla.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Egg White Veggie Burrito",
+              "difficulty": "Easy",
+              "time": "10 minutes",
+              "servings": 1,
+              "ingredients": [
+                "1 whole-wheat tortilla (60g)",
+                "120g liquid egg whites",
+                "40g fresh spinach",
+                "30g bell peppers, diced",
+                "20g onion, diced",
+                "15g salsa",
+                "1 tsp olive oil",
+                "Salt and pepper to taste"
+              ],
+              "steps": [
+                "Heat olive oil in a non-stick pan over medium heat",
+                "Sauté onions and bell peppers for 2-3 minutes until softened",
+                "Add egg whites and scramble until fully cooked",
+                "Add spinach and cook until just wilted",
+                "Warm tortilla for 10 seconds per side",
+                "Fill tortilla with egg mixture, top with salsa",
+                "Fold sides in and roll tightly to serve"
+              ],
+              "nutrition": {
+                "calories": 279,
+                "protein": 20.5,
+                "carbs": 37.9,
+                "fat": 4.5
+              },
+              "imageName": "Egg_White_Veggie_Burrito"
+            }
+          }
+        },
+        {
+          "id": "breakfast_swap_1",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Waffles con Jarabe y Crema",
+              "emoji": "🧇",
+              "calories": 560,
+              "protein": 10.0,
+              "carbs": 86.0,
+              "fat": 18.0,
+              "defaultQuantity": 180
+            },
+            "alternative": {
+              "name": "Waffle Integral con Yogur Griego y Frutos Rojos",
+              "emoji": "🧇",
+              "calories": 275,
+              "protein": 15.2,
+              "carbs": 33.9,
+              "fat": 7.2,
+              "defaultQuantity": 190
+            },
+            "summary": [
+              "+52% more protein",
+              "51% fewer calories",
+              "Adds antioxidants"
+            ],
+            "featuredInsight": "Greek yogurt and fruit add protein and fiber that balance blood sugar compared to syrup-heavy waffles.",
+            "description": "Protein-rich Greek yogurt provides sustained energy while berries add fiber and antioxidants.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Whole-Grain Waffle with Greek Yogurt & Berries",
+              "difficulty": "Easy",
+              "time": "5 minutes",
+              "servings": 1,
+              "ingredients": [
+                "1 whole-grain waffle (60g)",
+                "80g plain Greek yogurt",
+                "40g mixed berries",
+                "10g crushed almonds",
+                "Optional: drizzle of honey"
+              ],
+              "steps": [
+                "Toast the whole-grain waffle according to package directions",
+                "Spread Greek yogurt evenly on top",
+                "Top with fresh mixed berries",
+                "Sprinkle crushed almonds over berries",
+                "Add optional honey drizzle if desired"
+              ],
+              "nutrition": {
+                "calories": 275,
+                "protein": 15.2,
+                "carbs": 33.9,
+                "fat": 7.2
+              },
+              "imageName": "Whole-Grain_Waffle_with_Greek_Yogurt_and_Berries"
+            }
+          }
+        },
+        {
+          "id": "breakfast_swap_2",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Rollo de Canela",
+              "emoji": "🍩",
+              "calories": 480,
+              "protein": 6.0,
+              "carbs": 70.0,
+              "fat": 20.0,
+              "defaultQuantity": 110
+            },
+            "alternative": {
+              "name": "Skyr con Manzana y Canela",
+              "emoji": "🥣",
+              "calories": 130,
+              "protein": 16.7,
+              "carbs": 17.2,
+              "fat": 0.5,
+              "defaultQuantity": 240
+            },
+            "summary": [
+              "178% more protein",
+              "73% fewer calories",
+              "More satiety"
+            ],
+            "featuredInsight": "Protein-rich skyr delivers nearly 3x more protein while cutting calories by 73%.",
+            "description": "High-protein Icelandic skyr provides sustained energy. Natural sweetness from apple with cinnamon.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Skyr with Apple & Cinnamon",
+              "difficulty": "Easy",
+              "time": "3 minutes",
+              "servings": 1,
+              "ingredients": [
+                "150g plain skyr",
+                "80g apple, diced",
+                "1 tsp ground cinnamon",
+                "10g chopped walnuts (optional)"
+              ],
+              "steps": [
+                "Place skyr in a serving bowl",
+                "Dice apple into small cubes",
+                "Mix cinnamon into the skyr",
+                "Top with diced apple",
+                "Sprinkle with walnuts if desired"
+              ],
+              "nutrition": {
+                "calories": 130,
+                "protein": 16.7,
+                "carbs": 17.2,
+                "fat": 0.5
+              },
+              "imageName": "Skyr_with_Apple_and_Cinnamon"
+            }
+          }
+        },
+        {
+          "id": "breakfast_swap_3",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Galleta con Salchicha",
+              "emoji": "🥓",
+              "calories": 520,
+              "protein": 16.0,
+              "carbs": 41.0,
+              "fat": 33.0,
+              "defaultQuantity": 140
+            },
+            "alternative": {
+              "name": "Huevos sobre Tostada Integral con Tomate",
+              "emoji": "🍳",
+              "calories": 344,
+              "protein": 18.9,
+              "carbs": 27.8,
+              "fat": 17.2,
+              "defaultQuantity": 205
+            },
+            "summary": [
+              "34% fewer calories",
+              "Less processed meat",
+              "Adds vegetables"
+            ],
+            "featuredInsight": "Fresh eggs provide complete protein while whole-grain toast adds fiber.",
+            "description": "Made with fresh whole eggs and whole-grain bread for sustained energy.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Eggs on Whole-Grain Toast with Tomato",
+              "difficulty": "Easy",
+              "time": "8 minutes",
+              "servings": 1,
+              "ingredients": [
+                "2 slices whole-grain bread (60g)",
+                "2 large eggs",
+                "40g fresh tomato, sliced",
+                "1 tsp olive oil",
+                "Salt and pepper"
+              ],
+              "steps": [
+                "Toast bread slices",
+                "Heat olive oil in pan",
+                "Cook eggs sunny-side up or scrambled",
+                "Place eggs on toast",
+                "Top with tomato slices"
+              ],
+              "nutrition": {
+                "calories": 344,
+                "protein": 18.9,
+                "carbs": 27.8,
+                "fat": 17.2
+              },
+              "imageName": "Eggs_on_Whole-Grain_Toast_with_Tomato"
+            }
+          }
+        },
+        {
+          "id": "breakfast_swap_4",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Pastelillo de Tostadora",
+              "emoji": "🥧",
+              "calories": 400,
+              "protein": 4.0,
+              "carbs": 70.0,
+              "fat": 12.0,
+              "defaultQuantity": 50
+            },
+            "alternative": {
+              "name": "Pudín de Chía con Frutos Rojos",
+              "emoji": "🥣",
+              "calories": 235,
+              "protein": 6.2,
+              "carbs": 19.8,
+              "fat": 15.9,
+              "defaultQuantity": 235
+            },
+            "summary": [
+              "41% fewer calories",
+              "55% more protein",
+              "10g fiber"
+            ],
+            "featuredInsight": "Chia seeds provide 10g fiber and omega-3 fatty acids for sustained energy.",
+            "description": "Chia seeds expand to create a satisfying pudding with natural sweetness from berries.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Chia Pudding with Berries",
+              "difficulty": "Easy",
+              "time": "5 min + overnight",
+              "servings": 1,
+              "ingredients": [
+                "25g chia seeds",
+                "150ml unsweetened almond milk",
+                "50g fresh blueberries",
+                "10g shredded coconut"
+              ],
+              "steps": [
+                "Mix chia seeds with almond milk",
+                "Stir well to prevent clumping",
+                "Refrigerate overnight",
+                "Top with blueberries and coconut"
+              ],
+              "nutrition": {
+                "calories": 235,
+                "protein": 6.2,
+                "carbs": 19.8,
+                "fat": 15.9
+              },
+              "imageName": "Chia_Pudding_with_Berries"
+            }
+          }
+        },
+        {
+          "id": "breakfast_swap_5",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Batido de Frutas Embotellado (Azucarado)",
+              "emoji": "🥤",
+              "calories": 380,
+              "protein": 5.0,
+              "carbs": 85.0,
+              "fat": 1.0,
+              "defaultQuantity": 350
+            },
+            "alternative": {
+              "name": "Batido de Proteínas (Plátano, Espinacas)",
+              "emoji": "🥤",
+              "calories": 243,
+              "protein": 27.2,
+              "carbs": 27.7,
+              "fat": 4.2,
+              "defaultQuantity": 360
+            },
+            "summary": [
+              "444% more protein",
+              "36% fewer calories",
+              "Adds greens"
+            ],
+            "featuredInsight": "Delivers 27g protein while spinach adds iron and antioxidants.",
+            "description": "High-protein blend with natural sweetness from banana.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Protein Smoothie with Banana & Spinach",
+              "difficulty": "Easy",
+              "time": "3 minutes",
+              "servings": 1,
+              "ingredients": [
+                "200ml unsweetened almond milk",
+                "1 banana",
+                "30g whey protein",
+                "30g fresh spinach",
+                "Ice cubes"
+              ],
+              "steps": [
+                "Add all ingredients to blender",
+                "Blend until smooth",
+                "Serve immediately"
+              ],
+              "nutrition": {
+                "calories": 243,
+                "protein": 27.2,
+                "carbs": 27.7,
+                "fat": 4.2
+              },
+              "imageName": "Protein_Smoothie_with_Banana_and_Spinach"
+            }
+          }
+        },
+        {
+          "id": "breakfast_swap_6",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Jugo de Naranja Grande",
+              "emoji": "🧃",
+              "calories": 260,
+              "protein": 3.0,
+              "carbs": 62.0,
+              "fat": 0.0,
+              "defaultQuantity": 350
+            },
+            "alternative": {
+              "name": "Naranja Entera con 10 Almendras",
+              "emoji": "🍊",
+              "calories": 148,
+              "protein": 4.3,
+              "carbs": 18.9,
+              "fat": 7.5,
+              "defaultQuantity": 145
+            },
+            "summary": [
+              "43% fewer calories",
+              "3g fiber",
+              "Adds healthy fats"
+            ],
+            "featuredInsight": "Whole orange provides 3g fiber vs 0g in juice, almonds slow sugar absorption.",
+            "description": "Eating whole fruit preserves fiber. Almonds provide vitamin E and magnesium.",
+            "isComposedMeal": false,
+            "recipe": null
+          }
+        },
+        {
+          "id": "breakfast_swap_7",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Pastel Danés",
+              "emoji": "🥮",
+              "calories": 450,
+              "protein": 7.0,
+              "carbs": 55.0,
+              "fat": 22.0,
+              "defaultQuantity": 90
+            },
+            "alternative": {
+              "name": "Bol de Requesón con Piña",
+              "emoji": "🧀",
+              "calories": 221,
+              "protein": 20.5,
+              "carbs": 17.1,
+              "fat": 7.3,
+              "defaultQuantity": 240
+            },
+            "summary": [
+              "51% fewer calories",
+              "193% more protein",
+              "Natural sweetness"
+            ],
+            "featuredInsight": "Cottage cheese delivers slow-digesting casein protein for hours of satiety.",
+            "description": "High-protein cottage cheese with pineapple for vitamin C and digestive enzymes.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Cottage Cheese Bowl with Pineapple",
+              "difficulty": "Easy",
+              "time": "2 minutes",
+              "servings": 1,
+              "ingredients": [
+                "150g low-fat cottage cheese",
+                "80g fresh pineapple chunks",
+                "10g mixed seeds"
+              ],
+              "steps": [
+                "Place cottage cheese in bowl",
+                "Top with pineapple",
+                "Sprinkle seeds on top"
+              ],
+              "nutrition": {
+                "calories": 221,
+                "protein": 20.5,
+                "carbs": 17.1,
+                "fat": 7.3
+              },
+              "imageName": "Cottage_Cheese_Bowl_with_Pineapple"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch_bad",
+      "title": "⚠️ Opciones Pesadas de Almuerzo",
+      "category": "lunch",
+      "items": [
+        {
+          "id": "lunch_bad_0",
+          "type": "badFood",
+          "food": {
+            "name": "Hamburguesa de Comida Rápida",
+            "calories": 296,
+            "protein": 11.4,
+            "carbs": 20.5,
+            "fat": 18.2,
+            "defaultQuantity": 220,
+            "emoji": "🍔"
+          }
+        },
+        {
+          "id": "lunch_bad_1",
+          "type": "badFood",
+          "food": {
+            "name": "Sándwich de Pollo Frito",
+            "calories": 290,
+            "protein": 14.0,
+            "carbs": 25.0,
+            "fat": 16.0,
+            "defaultQuantity": 200,
+            "emoji": "🍗"
+          }
+        },
+        {
+          "id": "lunch_bad_2",
+          "type": "badFood",
+          "food": {
+            "name": "Rebanada de Pizza de Pepperoni",
+            "calories": 291,
+            "protein": 10.9,
+            "carbs": 27.3,
+            "fat": 16.4,
+            "defaultQuantity": 110,
+            "emoji": "🍕"
+          }
+        },
+        {
+          "id": "lunch_bad_3",
+          "type": "badFood",
+          "food": {
+            "name": "Papas Fritas Grandes",
+            "calories": 320,
+            "protein": 4.0,
+            "carbs": 43.3,
+            "fat": 14.7,
+            "defaultQuantity": 150,
+            "emoji": "🍟"
+          }
+        },
+        {
+          "id": "lunch_bad_4",
+          "type": "badFood",
+          "food": {
+            "name": "Hot Dog con Pan",
+            "calories": 450,
+            "protein": 15.0,
+            "carbs": 35.0,
+            "fat": 28.0,
+            "defaultQuantity": 100,
+            "emoji": "🌭"
+          }
+        },
+        {
+          "id": "lunch_bad_5",
+          "type": "badFood",
+          "food": {
+            "name": "Sándwich de Jamón y Queso",
+            "calories": 289,
+            "protein": 11.1,
+            "carbs": 26.7,
+            "fat": 14.4,
+            "defaultQuantity": 180,
+            "emoji": "🥪"
+          }
+        },
+        {
+          "id": "lunch_bad_6",
+          "type": "badFood",
+          "food": {
+            "name": "Pasta Alfredo Cremosa",
+            "calories": 257,
+            "protein": 7.9,
+            "carbs": 28.6,
+            "fat": 12.1,
+            "defaultQuantity": 280,
+            "emoji": "🍝"
+          }
+        },
+        {
+          "id": "lunch_bad_7",
+          "type": "badFood",
+          "food": {
+            "name": "Empanadillas Fritas",
+            "calories": 256,
+            "protein": 7.5,
+            "carbs": 23.8,
+            "fat": 13.8,
+            "defaultQuantity": 160,
+            "emoji": "🥟"
+          }
+        },
+        {
+          "id": "lunch_bad_8",
+          "type": "badFood",
+          "food": {
+            "name": "Sándwich de Queso a la Plancha",
+            "calories": 333,
+            "protein": 10.0,
+            "carbs": 27.5,
+            "fat": 20.0,
+            "defaultQuantity": 120,
+            "emoji": "🧀"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lunch_swaps",
+      "title": "✨ Mejores Opciones de Almuerzo",
+      "category": "lunch",
+      "items": [
+        {
+          "id": "lunch_swap_0",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Sub de Albóndigas",
+              "emoji": "🥖",
+              "calories": 650,
+              "protein": 28.0,
+              "carbs": 60.0,
+              "fat": 30.0,
+              "defaultQuantity": 280
+            },
+            "alternative": {
+              "name": "Pavo y Aguacate en Pan Integral",
+              "emoji": "🥗",
+              "calories": 368,
+              "protein": 34.4,
+              "carbs": 30.9,
+              "fat": 11.3,
+              "defaultQuantity": 250
+            },
+            "summary": [
+              "43% fewer calories",
+              "23% more protein",
+              "Whole-grain fiber"
+            ],
+            "featuredInsight": "Lean turkey delivers 34g protein while avocado provides heart-healthy fats.",
+            "description": "Whole-grain bread for sustained energy. Turkey provides complete protein.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Turkey Avocado Sandwich",
+              "difficulty": "Easy",
+              "time": "5 minutes",
+              "servings": 1,
+              "ingredients": [
+                "2 slices whole-grain bread",
+                "90g turkey breast",
+                "40g avocado",
+                "20g lettuce",
+                "20g tomato",
+                "1 tsp Dijon mustard"
+              ],
+              "steps": [
+                "Toast bread if desired",
+                "Spread mustard",
+                "Layer turkey and avocado",
+                "Add vegetables",
+                "Close and serve"
+              ],
+              "nutrition": {
+                "calories": 368,
+                "protein": 34.4,
+                "carbs": 30.9,
+                "fat": 11.3
+              },
+              "imageName": "Turkey_Avocado_Sandwich_on_Whole_Grain"
+            }
+          }
+        },
+        {
+          "id": "lunch_swap_1",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Quesadilla de Pollo",
+              "emoji": "🌯",
+              "calories": 620,
+              "protein": 30.0,
+              "carbs": 48.0,
+              "fat": 32.0,
+              "defaultQuantity": 220
+            },
+            "alternative": {
+              "name": "Bol de Burrito de Frijoles Negros",
+              "emoji": "🥙",
+              "calories": 305,
+              "protein": 14.4,
+              "carbs": 59.6,
+              "fat": 1.9,
+              "defaultQuantity": 320
+            },
+            "summary": [
+              "51% fewer calories",
+              "94% less fat",
+              "15g fiber"
+            ],
+            "featuredInsight": "Black beans provide plant protein and 15g fiber while cutting fat from 32g to 1.9g.",
+            "description": "Fiber-rich black beans and brown rice for sustained energy.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Black Bean Burrito Bowl",
+              "difficulty": "Easy",
+              "time": "25 minutes",
+              "servings": 1,
+              "ingredients": [
+                "120g black beans",
+                "80g brown rice",
+                "40g corn",
+                "50g bell peppers",
+                "30g salsa",
+                "1 tsp cumin"
+              ],
+              "steps": [
+                "Cook brown rice",
+                "Sauté peppers",
+                "Add beans, corn, and spices",
+                "Assemble bowl with rice base",
+                "Top with salsa"
+              ],
+              "nutrition": {
+                "calories": 305,
+                "protein": 14.4,
+                "carbs": 59.6,
+                "fat": 1.9
+              },
+              "imageName": "Black_Bean_Burrito_Bowl"
+            }
+          }
+        },
+        {
+          "id": "lunch_swap_2",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Papas con Chili y Queso",
+              "emoji": "🍟",
+              "calories": 700,
+              "protein": 16.0,
+              "carbs": 64.0,
+              "fat": 40.0,
+              "defaultQuantity": 200
+            },
+            "alternative": {
+              "name": "Papas Asadas con Dip de Yogur Griego",
+              "emoji": "🥔",
+              "calories": 210,
+              "protein": 11.3,
+              "carbs": 28.8,
+              "fat": 5.5,
+              "defaultQuantity": 245
+            },
+            "summary": [
+              "70% fewer calories",
+              "86% less fat",
+              "Protein-rich dip"
+            ],
+            "featuredInsight": "Roasting cuts fat from 40g to 5.5g. Greek yogurt adds protein and probiotics.",
+            "description": "Oven-roasted potatoes with tangy yogurt dip.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Roasted Potato Wedges with Greek Yogurt Dip",
+              "difficulty": "Easy",
+              "time": "30 minutes",
+              "servings": 1,
+              "ingredients": [
+                "150g potatoes",
+                "5g olive oil",
+                "Paprika, garlic powder",
+                "80g Greek yogurt",
+                "Fresh chives"
+              ],
+              "steps": [
+                "Cut potatoes into wedges",
+                "Toss with oil and spices",
+                "Roast at 425°F for 25 minutes",
+                "Mix yogurt with chives",
+                "Serve hot with dip"
+              ],
+              "nutrition": {
+                "calories": 210,
+                "protein": 11.3,
+                "carbs": 28.8,
+                "fat": 5.5
+              },
+              "imageName": "Roasted_Potato_Wedges_with_Greek_Yogurt_Dip"
+            }
+          }
+        },
+        {
+          "id": "lunch_swap_3",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Alitas Buffalo (10 pzas)",
+              "emoji": "🍗",
+              "calories": 780,
+              "protein": 50.0,
+              "carbs": 8.0,
+              "fat": 55.0,
+              "defaultQuantity": 250
+            },
+            "alternative": {
+              "name": "Brochetas de Pollo a la Parrilla + Ensalada",
+              "emoji": "🍢",
+              "calories": 324,
+              "protein": 47.5,
+              "carbs": 6.5,
+              "fat": 12.1,
+              "defaultQuantity": 245
+            },
+            "summary": [
+              "58% fewer calories",
+              "78% less fat",
+              "Keeps protein high"
+            ],
+            "featuredInsight": "Grilling cuts fat from 55g to 12g while preserving 47.5g of lean protein.",
+            "description": "Grilled chicken provides clean protein. Fresh salad adds vitamins.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Grilled Chicken Skewers with Salad",
+              "difficulty": "Easy",
+              "time": "20 minutes",
+              "servings": 1,
+              "ingredients": [
+                "150g chicken breast",
+                "Paprika, garlic powder",
+                "60g mixed greens",
+                "20g tomatoes",
+                "Balsamic vinaigrette"
+              ],
+              "steps": [
+                "Cube and season chicken",
+                "Thread onto skewers",
+                "Grill 4-5 min per side",
+                "Toss greens with vinaigrette",
+                "Serve together"
+              ],
+              "nutrition": {
+                "calories": 324,
+                "protein": 47.5,
+                "carbs": 6.5,
+                "fat": 12.1
+              },
+              "imageName": "Grilled_Chicken_Skewers_with_Side_Salad"
+            }
+          }
+        },
+        {
+          "id": "lunch_swap_4",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Mac & Cheese con Tocino",
+              "emoji": "🧀",
+              "calories": 740,
+              "protein": 24.0,
+              "carbs": 78.0,
+              "fat": 34.0,
+              "defaultQuantity": 300
+            },
+            "alternative": {
+              "name": "Pasta de Garbanzos con Tomate y Albahaca",
+              "emoji": "🍝",
+              "calories": 341,
+              "protein": 18.3,
+              "carbs": 58.1,
+              "fat": 5.8,
+              "defaultQuantity": 225
+            },
+            "summary": [
+              "54% fewer calories",
+              "83% less fat",
+              "High-fiber pasta"
+            ],
+            "featuredInsight": "Chickpea pasta provides 8g fiber and plant protein while cutting fat from 34g to 5.8g.",
+            "description": "Legume-based pasta with light tomato sauce and fresh basil.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Chickpea Pasta with Tomato & Basil",
+              "difficulty": "Easy",
+              "time": "15 minutes",
+              "servings": 1,
+              "ingredients": [
+                "75g chickpea pasta",
+                "120g tomato sauce",
+                "30g spinach",
+                "Fresh basil",
+                "1 clove garlic",
+                "1 tsp olive oil"
+              ],
+              "steps": [
+                "Cook pasta",
+                "Sauté garlic in oil",
+                "Add tomato sauce",
+                "Add spinach",
+                "Toss with pasta",
+                "Top with basil"
+              ],
+              "nutrition": {
+                "calories": 341,
+                "protein": 18.3,
+                "carbs": 58.1,
+                "fat": 5.8
+              },
+              "imageName": "Chickpea_Pasta_with_Tomato_and_Basil"
+            }
+          }
+        },
+        {
+          "id": "lunch_swap_5",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Pescado con Papas",
+              "emoji": "🐟",
+              "calories": 820,
+              "protein": 32.0,
+              "carbs": 72.0,
+              "fat": 42.0,
+              "defaultQuantity": 400
+            },
+            "alternative": {
+              "name": "Pescado Blanco al Horno con Ensalada de Quinoa",
+              "emoji": "🐟",
+              "calories": 339,
+              "protein": 34.1,
+              "carbs": 19.4,
+              "fat": 12.4,
+              "defaultQuantity": 310
+            },
+            "summary": [
+              "59% fewer calories",
+              "70% less fat",
+              "Complete protein"
+            ],
+            "featuredInsight": "Baking eliminates deep-frying oils. Quinoa provides all 9 essential amino acids.",
+            "description": "Oven-baked fish retains omega-3s. Quinoa salad adds fiber and vegetables.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Baked White Fish with Quinoa Salad",
+              "difficulty": "Easy",
+              "time": "25 minutes",
+              "servings": 1,
+              "ingredients": [
+                "150g white fish",
+                "80g quinoa",
+                "40g cucumber",
+                "30g tomatoes",
+                "10g olive oil",
+                "Lemon juice, herbs"
+              ],
+              "steps": [
+                "Season fish with herbs",
+                "Bake at 400°F for 12-15 min",
+                "Mix quinoa with vegetables",
+                "Dress with oil and lemon",
+                "Serve fish over salad"
+              ],
+              "nutrition": {
+                "calories": 339,
+                "protein": 34.1,
+                "carbs": 19.4,
+                "fat": 12.4
+              },
+              "imageName": "Baked_White_Fish_with_Quinoa_Salad"
+            }
+          }
+        },
+        {
+          "id": "lunch_swap_6",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Rollo de Salchicha",
+              "emoji": "🥐",
+              "calories": 520,
+              "protein": 16.0,
+              "carbs": 40.0,
+              "fat": 32.0,
+              "defaultQuantity": 140
+            },
+            "alternative": {
+              "name": "Wrap Integral de Pavo y Espinacas",
+              "emoji": "🥙",
+              "calories": 367,
+              "protein": 33.3,
+              "carbs": 38.3,
+              "fat": 9.7,
+              "defaultQuantity": 195
+            },
+            "summary": [
+              "29% fewer calories",
+              "108% more protein",
+              "70% less fat"
+            ],
+            "featuredInsight": "Lean turkey provides 33g protein while cutting fat from 32g to 9.7g.",
+            "description": "Whole-wheat tortilla with lean turkey and fresh spinach.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Turkey Spinach Wrap",
+              "difficulty": "Easy",
+              "time": "5 minutes",
+              "servings": 1,
+              "ingredients": [
+                "1 whole-wheat tortilla",
+                "90g turkey breast",
+                "30g spinach",
+                "15g hummus"
+              ],
+              "steps": [
+                "Warm tortilla",
+                "Spread hummus",
+                "Layer turkey and spinach",
+                "Roll tightly",
+                "Slice and serve"
+              ],
+              "nutrition": {
+                "calories": 367,
+                "protein": 33.3,
+                "carbs": 38.3,
+                "fat": 9.7
+              },
+              "imageName": "Turkey_Spinach_Whole-Wheat_Wrap"
+            }
+          }
+        },
+        {
+          "id": "lunch_swap_7",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Pollo a la Naranja con Arroz Blanco",
+              "emoji": "🍜",
+              "calories": 780,
+              "protein": 35.0,
+              "carbs": 95.0,
+              "fat": 24.0,
+              "defaultQuantity": 350
+            },
+            "alternative": {
+              "name": "Salteado de Tofu y Brócoli con Arroz Integral",
+              "emoji": "🥦",
+              "calories": 262,
+              "protein": 13.9,
+              "carbs": 28.2,
+              "fat": 11.7,
+              "defaultQuantity": 305
+            },
+            "summary": [
+              "66% fewer calories",
+              "70% fewer carbs",
+              "Plant-based protein"
+            ],
+            "featuredInsight": "Eliminates deep-fried breading and sugary sauce, cutting calories by 66%.",
+            "description": "Light stir-fry with brown rice for complex carbs and B vitamins.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Tofu Broccoli Stir-Fry with Brown Rice",
+              "difficulty": "Easy",
+              "time": "20 minutes",
+              "servings": 1,
+              "ingredients": [
+                "120g firm tofu",
+                "50g broccoli",
+                "40g carrots",
+                "80g brown rice",
+                "10g soy sauce",
+                "5g sesame oil",
+                "Garlic, ginger"
+              ],
+              "steps": [
+                "Cook rice",
+                "Press and cube tofu",
+                "Stir-fry tofu until golden",
+                "Add vegetables and aromatics",
+                "Add soy sauce",
+                "Serve over rice"
+              ],
+              "nutrition": {
+                "calories": 262,
+                "protein": 13.9,
+                "carbs": 28.2,
+                "fat": 11.7
+              },
+              "imageName": "Tofu_Broccoli_Stir-Fry_with_Brown_Rice"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "snack_bad",
+      "title": "⚠️ Snacks a Reemplazar",
+      "category": "snack",
+      "items": [
+        {
+          "id": "snack_bad_0",
+          "type": "badFood",
+          "food": {
+            "name": "Papas Fritas de Bolsa",
+            "calories": 536,
+            "protein": 7.0,
+            "carbs": 53.0,
+            "fat": 35.0,
+            "defaultQuantity": 50,
+            "emoji": "🥔"
+          }
+        },
+        {
+          "id": "snack_bad_1",
+          "type": "badFood",
+          "food": {
+            "name": "Barra de Chocolate",
+            "calories": 500,
+            "protein": 6.0,
+            "carbs": 60.0,
+            "fat": 27.0,
+            "defaultQuantity": 45,
+            "emoji": "🍫"
+          }
+        },
+        {
+          "id": "snack_bad_2",
+          "type": "badFood",
+          "food": {
+            "name": "Galletas",
+            "calories": 488,
+            "protein": 5.5,
+            "carbs": 64.0,
+            "fat": 24.0,
+            "defaultQuantity": 60,
+            "emoji": "🍪"
+          }
+        },
+        {
+          "id": "snack_bad_3",
+          "type": "badFood",
+          "food": {
+            "name": "Refresco y Galletas Saladas",
+            "calories": 66,
+            "protein": 1.0,
+            "carbs": 16.0,
+            "fat": 1.5,
+            "defaultQuantity": 380,
+            "emoji": "🥤"
+          }
+        },
+        {
+          "id": "snack_bad_4",
+          "type": "badFood",
+          "food": {
+            "name": "Palomitas de Cine (con Mantequilla)",
+            "calories": 500,
+            "protein": 9.0,
+            "carbs": 52.0,
+            "fat": 30.0,
+            "defaultQuantity": 85,
+            "emoji": "🍿"
+          }
+        },
+        {
+          "id": "snack_bad_5",
+          "type": "badFood",
+          "food": {
+            "name": "Nachos con Queso",
+            "calories": 330,
+            "protein": 7.0,
+            "carbs": 35.0,
+            "fat": 17.0,
+            "defaultQuantity": 180,
+            "emoji": "🧀"
+          }
+        },
+        {
+          "id": "snack_bad_6",
+          "type": "badFood",
+          "food": {
+            "name": "Dona Glaseada",
+            "calories": 420,
+            "protein": 5.0,
+            "carbs": 47.0,
+            "fat": 25.0,
+            "defaultQuantity": 65,
+            "emoji": "🍩"
+          }
+        },
+        {
+          "id": "snack_bad_7",
+          "type": "badFood",
+          "food": {
+            "name": "Pasteles Empaquetados",
+            "calories": 380,
+            "protein": 3.5,
+            "carbs": 58.0,
+            "fat": 12.0,
+            "defaultQuantity": 80,
+            "emoji": "🥠"
+          }
+        },
+        {
+          "id": "snack_bad_8",
+          "type": "badFood",
+          "food": {
+            "name": "S'mores",
+            "calories": 460,
+            "protein": 5.0,
+            "carbs": 74.0,
+            "fat": 16.0,
+            "defaultQuantity": 70,
+            "emoji": "🔥"
+          }
+        },
+        {
+          "id": "snack_bad_9",
+          "type": "badFood",
+          "food": {
+            "name": "Sándwich de Crema de Cacahuate y Mermelada",
+            "calories": 360,
+            "protein": 11.0,
+            "carbs": 45.0,
+            "fat": 14.0,
+            "defaultQuantity": 100,
+            "emoji": "🥜"
+          }
+        }
+      ]
+    },
+    {
+      "id": "snack_swaps",
+      "title": "✨ Snacks Saludables",
+      "category": "snack",
+      "items": [
+        {
+          "id": "snack_swap_0",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Sundae de Helado",
+              "emoji": "🍦",
+              "calories": 450,
+              "protein": 6.0,
+              "carbs": 60.0,
+              "fat": 20.0,
+              "defaultQuantity": 180
+            },
+            "alternative": {
+              "name": "Copa de Yogur Helado Alto en Proteínas",
+              "emoji": "🍧",
+              "calories": 194,
+              "protein": 18.2,
+              "carbs": 26.4,
+              "fat": 3.4,
+              "defaultQuantity": 165
+            },
+            "summary": [
+              "57% fewer calories",
+              "203% more protein",
+              "83% less fat"
+            ],
+            "featuredInsight": "Delivers 18g protein while cutting fat from 20g to 3.4g.",
+            "description": "Protein-enriched frozen yogurt with fresh berries.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "High-Protein Frozen Yogurt Cup",
+              "difficulty": "Easy",
+              "time": "5 minutes",
+              "servings": 1,
+              "ingredients": [
+                "120g frozen yogurt",
+                "15g protein powder",
+                "30g strawberries"
+              ],
+              "steps": [
+                "Let yogurt soften slightly",
+                "Mix in protein powder",
+                "Top with berries",
+                "Serve immediately"
+              ],
+              "nutrition": {
+                "calories": 194,
+                "protein": 18.2,
+                "carbs": 26.4,
+                "fat": 3.4
+              },
+              "imageName": "High-Protein_Frozen_Yogurt_Cup"
+            }
+          }
+        },
+        {
+          "id": "snack_swap_1",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Malteada de Chocolate",
+              "emoji": "🥤",
+              "calories": 520,
+              "protein": 10.0,
+              "carbs": 80.0,
+              "fat": 18.0,
+              "defaultQuantity": 400
+            },
+            "alternative": {
+              "name": "Batido de Proteínas con Plátano",
+              "emoji": "🥤",
+              "calories": 276,
+              "protein": 32.3,
+              "carbs": 35.4,
+              "fat": 2.3,
+              "defaultQuantity": 330
+            },
+            "summary": [
+              "47% fewer calories",
+              "223% more protein",
+              "87% less fat"
+            ],
+            "featuredInsight": "Whey protein and skim milk deliver 32g protein while cutting fat from 18g to 2.3g.",
+            "description": "High-protein shake with natural banana sweetness.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Protein Shake with Banana",
+              "difficulty": "Easy",
+              "time": "3 minutes",
+              "servings": 1,
+              "ingredients": [
+                "200ml skim milk",
+                "30g chocolate whey protein",
+                "1 banana",
+                "Ice cubes"
+              ],
+              "steps": [
+                "Add all ingredients to blender",
+                "Blend until smooth",
+                "Serve immediately"
+              ],
+              "nutrition": {
+                "calories": 276,
+                "protein": 32.3,
+                "carbs": 35.4,
+                "fat": 2.3
+              },
+              "imageName": "Protein_Shake_with_Banana"
+            }
+          }
+        },
+        {
+          "id": "snack_swap_2",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Pretzel Suave con Dip de Queso",
+              "emoji": "🥨",
+              "calories": 480,
+              "protein": 12.0,
+              "carbs": 85.0,
+              "fat": 10.0,
+              "defaultQuantity": 160
+            },
+            "alternative": {
+              "name": "Galletas Integrales con Queso Light",
+              "emoji": "🧀",
+              "calories": 176,
+              "protein": 9.5,
+              "carbs": 16.9,
+              "fat": 6.8,
+              "defaultQuantity": 55
+            },
+            "summary": [
+              "63% fewer calories",
+              "80% fewer carbs",
+              "Portion control"
+            ],
+            "featuredInsight": "Whole-grain crackers provide 3g fiber while reducing carbs from 85g to 17g.",
+            "description": "Satisfying crunch with fiber and protein.",
+            "isComposedMeal": false,
+            "recipe": null
+          }
+        },
+        {
+          "id": "snack_swap_3",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Palitos de Pan con Ajo y Mantequilla",
+              "emoji": "🧈",
+              "calories": 380,
+              "protein": 8.0,
+              "carbs": 45.0,
+              "fat": 16.0,
+              "defaultQuantity": 90
+            },
+            "alternative": {
+              "name": "Pan Pita Integral con Hummus",
+              "emoji": "🥙",
+              "calories": 229,
+              "protein": 7.6,
+              "carbs": 27.0,
+              "fat": 9.8,
+              "defaultQuantity": 90
+            },
+            "summary": [
+              "40% fewer calories",
+              "40% fewer carbs",
+              "Plant-based protein"
+            ],
+            "featuredInsight": "Hummus provides 4g plant protein and fiber from chickpeas.",
+            "description": "Whole-wheat pita with Mediterranean flavor.",
+            "isComposedMeal": false,
+            "recipe": null
+          }
+        },
+        {
+          "id": "snack_swap_4",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Palitos de Mozzarella Fritos",
+              "emoji": "🧀",
+              "calories": 540,
+              "protein": 20.0,
+              "carbs": 40.0,
+              "fat": 32.0,
+              "defaultQuantity": 150
+            },
+            "alternative": {
+              "name": "Quesadilla Baja en Carbohidratos (Queso Light)",
+              "emoji": "🌮",
+              "calories": 280,
+              "protein": 22.0,
+              "carbs": 18.0,
+              "fat": 10.0,
+              "defaultQuantity": 120
+            },
+            "summary": [
+              "48% fewer calories",
+              "55% fewer carbs",
+              "69% less fat"
+            ],
+            "featuredInsight": "Low-carb tortilla cuts carbs from 40g to 18g while reduced-fat cheese slashes fat.",
+            "description": "Pan-toasted for crispy texture without deep-frying.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Low-Carb Cheese Quesadilla",
+              "difficulty": "Easy",
+              "time": "5 minutes",
+              "servings": 1,
+              "ingredients": [
+                "1 low-carb tortilla",
+                "40g reduced-fat cheese",
+                "Cooking spray"
+              ],
+              "steps": [
+                "Spray pan with cooking spray",
+                "Place tortilla in pan",
+                "Add cheese to half",
+                "Fold and cook 2-3 min per side"
+              ],
+              "nutrition": {
+                "calories": 280,
+                "protein": 22.0,
+                "carbs": 18.0,
+                "fat": 10.0
+              },
+              "imageName": "Low-Carb_Cheese_Quesadilla"
+            }
+          }
+        },
+        {
+          "id": "snack_swap_5",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Rollitos Primavera Fritos",
+              "emoji": "🥟",
+              "calories": 420,
+              "protein": 8.0,
+              "carbs": 45.0,
+              "fat": 22.0,
+              "defaultQuantity": 120
+            },
+            "alternative": {
+              "name": "Rollitos de Papel de Arroz (Verduras y Camarones)",
+              "emoji": "🥗",
+              "calories": 187,
+              "protein": 16.8,
+              "carbs": 28.8,
+              "fat": 0.5,
+              "defaultQuantity": 170
+            },
+            "summary": [
+              "55% fewer calories",
+              "110% more protein",
+              "98% less fat"
+            ],
+            "featuredInsight": "Fresh rice paper eliminates deep-frying. Shrimp provides 17g lean protein.",
+            "description": "Light and fresh with colorful vegetables and lean shrimp.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Fresh Rice Paper Rolls with Shrimp",
+              "difficulty": "Medium",
+              "time": "15 minutes",
+              "servings": 2,
+              "ingredients": [
+                "2 rice paper sheets",
+                "60g cooked shrimp",
+                "40g cucumber",
+                "40g carrot",
+                "Fresh mint and cilantro"
+              ],
+              "steps": [
+                "Dip rice paper in warm water",
+                "Layer shrimp and vegetables",
+                "Fold and roll tightly",
+                "Serve with dipping sauce"
+              ],
+              "nutrition": {
+                "calories": 187,
+                "protein": 16.8,
+                "carbs": 28.8,
+                "fat": 0.5
+              },
+              "imageName": "Fresh_Rice_Paper_Rolls_with_Shrimp"
+            }
+          }
+        },
+        {
+          "id": "snack_swap_6",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Croissant de Chocolate",
+              "emoji": "🥐",
+              "calories": 350,
+              "protein": 7.0,
+              "carbs": 38.0,
+              "fat": 18.0,
+              "defaultQuantity": 70
+            },
+            "alternative": {
+              "name": "Parfait de Yogur Griego con Frutos Rojos",
+              "emoji": "🍓",
+              "calories": 203,
+              "protein": 17.3,
+              "carbs": 23.0,
+              "fat": 4.7,
+              "defaultQuantity": 210
+            },
+            "summary": [
+              "42% fewer calories",
+              "147% more protein",
+              "74% less fat"
+            ],
+            "featuredInsight": "Greek yogurt provides 17g protein and probiotics while cutting fat from 18g to 4.7g.",
+            "description": "Layered parfait with protein for sustained energy.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Greek Yogurt Parfait with Berries",
+              "difficulty": "Easy",
+              "time": "3 minutes",
+              "servings": 1,
+              "ingredients": [
+                "150g Greek yogurt",
+                "40g blueberries",
+                "20g granola"
+              ],
+              "steps": [
+                "Layer half the yogurt",
+                "Add half the berries",
+                "Add remaining yogurt",
+                "Top with berries and granola"
+              ],
+              "nutrition": {
+                "calories": 203,
+                "protein": 17.3,
+                "carbs": 23.0,
+                "fat": 4.7
+              },
+              "imageName": "Greek_Yogurt_Parfait_with_Berries"
+            }
+          }
+        },
+        {
+          "id": "snack_swap_7",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Latte de Caramelo",
+              "emoji": "☕",
+              "calories": 320,
+              "protein": 9.0,
+              "carbs": 52.0,
+              "fat": 7.0,
+              "defaultQuantity": 355
+            },
+            "alternative": {
+              "name": "Americano con un Toque de Leche",
+              "emoji": "☕",
+              "calories": 7,
+              "protein": 0.7,
+              "carbs": 1.0,
+              "fat": 0.0,
+              "defaultQuantity": 220
+            },
+            "summary": [
+              "98% fewer calories",
+              "98% less sugar",
+              "Same caffeine"
+            ],
+            "featuredInsight": "Eliminates caramel syrup, saving 313 calories. Zero added sugar.",
+            "description": "Black coffee with minimal calories and the same espresso kick.",
+            "isComposedMeal": false,
+            "recipe": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "dinner_bad",
+      "title": "⚠️ Cenas Pesadas a Mejorar",
+      "category": "dinner",
+      "items": [
+        {
+          "id": "dinner_bad_0",
+          "type": "badFood",
+          "food": {
+            "name": "Pollo Frito con Papas",
+            "calories": 273,
+            "protein": 11.7,
+            "carbs": 20.0,
+            "fat": 16.0,
+            "defaultQuantity": 300,
+            "emoji": "🍗"
+          }
+        },
+        {
+          "id": "dinner_bad_1",
+          "type": "badFood",
+          "food": {
+            "name": "Pasta Cremosa",
+            "calories": 243,
+            "protein": 7.1,
+            "carbs": 26.8,
+            "fat": 11.4,
+            "defaultQuantity": 280,
+            "emoji": "🍝"
+          }
+        },
+        {
+          "id": "dinner_bad_2",
+          "type": "badFood",
+          "food": {
+            "name": "Nachos Cargados",
+            "calories": 300,
+            "protein": 7.2,
+            "carbs": 26.0,
+            "fat": 18.0,
+            "defaultQuantity": 250,
+            "emoji": "🫓"
+          }
+        },
+        {
+          "id": "dinner_bad_3",
+          "type": "badFood",
+          "food": {
+            "name": "Pizza de Masa Gruesa",
+            "calories": 343,
+            "protein": 12.9,
+            "carbs": 32.1,
+            "fat": 18.6,
+            "defaultQuantity": 140,
+            "emoji": "🍕"
+          }
+        },
+        {
+          "id": "dinner_bad_4",
+          "type": "badFood",
+          "food": {
+            "name": "Bistec con Puré de Papas y Mantequilla",
+            "calories": 223,
+            "protein": 11.4,
+            "carbs": 14.3,
+            "fat": 13.1,
+            "defaultQuantity": 350,
+            "emoji": "🥩"
+          }
+        },
+        {
+          "id": "dinner_bad_5",
+          "type": "badFood",
+          "food": {
+            "name": "Tacos de Res con Crema Agria",
+            "calories": 300,
+            "protein": 11.0,
+            "carbs": 27.5,
+            "fat": 15.0,
+            "defaultQuantity": 200,
+            "emoji": "🌮"
+          }
+        },
+        {
+          "id": "dinner_bad_6",
+          "type": "badFood",
+          "food": {
+            "name": "Fideos Ramen (Instantáneos)",
+            "calories": 612,
+            "protein": 14.1,
+            "carbs": 76.5,
+            "fat": 25.9,
+            "defaultQuantity": 85,
+            "emoji": "🍜"
+          }
+        },
+        {
+          "id": "dinner_bad_7",
+          "type": "badFood",
+          "food": {
+            "name": "Plato de Empanadillas Fritas",
+            "calories": 267,
+            "protein": 8.3,
+            "carbs": 24.2,
+            "fat": 13.3,
+            "defaultQuantity": 240,
+            "emoji": "🥟"
+          }
+        },
+        {
+          "id": "dinner_bad_8",
+          "type": "badFood",
+          "food": {
+            "name": "Pastel de Carne",
+            "calories": 260,
+            "protein": 8.8,
+            "carbs": 22.0,
+            "fat": 14.0,
+            "defaultQuantity": 250,
+            "emoji": "🥧"
+          }
+        },
+        {
+          "id": "dinner_bad_9",
+          "type": "badFood",
+          "food": {
+            "name": "Canasta de Camarones Fritos",
+            "calories": 257,
+            "protein": 10.0,
+            "carbs": 22.1,
+            "fat": 13.6,
+            "defaultQuantity": 280,
+            "emoji": "🍤"
+          }
+        },
+        {
+          "id": "dinner_bad_10",
+          "type": "badFood",
+          "food": {
+            "name": "Sándwich Philly Cheesesteak",
+            "calories": 263,
+            "protein": 11.3,
+            "carbs": 21.3,
+            "fat": 13.1,
+            "defaultQuantity": 320,
+            "emoji": "🥪"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dinner_swaps",
+      "title": "✨ Opciones de Cena Más Ligeras",
+      "category": "dinner",
+      "items": [
+        {
+          "id": "dinner_swap_0",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Doble Hamburguesa con Queso",
+              "emoji": "🍔",
+              "calories": 720,
+              "protein": 32.0,
+              "carbs": 50.0,
+              "fat": 42.0,
+              "defaultQuantity": 280
+            },
+            "alternative": {
+              "name": "Hamburguesa de Pavo en Hoja de Lechuga",
+              "emoji": "🥗",
+              "calories": 209,
+              "protein": 37.1,
+              "carbs": 2.0,
+              "fat": 4.9,
+              "defaultQuantity": 170
+            },
+            "summary": [
+              "71% fewer calories",
+              "16% more protein",
+              "88% less fat"
+            ],
+            "featuredInsight": "Lean turkey provides 37g protein while cutting fat from 42g to 4.9g.",
+            "description": "Lettuce wrap eliminates refined carbs from bun.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Grilled Turkey Burger Lettuce Wrap",
+              "difficulty": "Easy",
+              "time": "15 minutes",
+              "servings": 1,
+              "ingredients": [
+                "120g ground turkey (93% lean)",
+                "2 large lettuce leaves",
+                "20g tomato",
+                "10g Dijon mustard",
+                "Garlic powder, onion powder"
+              ],
+              "steps": [
+                "Mix turkey with seasonings",
+                "Form patty",
+                "Grill 5-6 min per side",
+                "Place in lettuce leaves",
+                "Top with tomato and mustard"
+              ],
+              "nutrition": {
+                "calories": 209,
+                "protein": 37.1,
+                "carbs": 2.0,
+                "fat": 4.9
+              },
+              "imageName": "Grilled_Turkey_Burger_Lettuce_Wrap"
+            }
+          }
+        },
+        {
+          "id": "dinner_swap_1",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Lasaña de Carne y Queso",
+              "emoji": "🍝",
+              "calories": 640,
+              "protein": 28.0,
+              "carbs": 62.0,
+              "fat": 32.0,
+              "defaultQuantity": 300
+            },
+            "alternative": {
+              "name": "Berenjena a la Parmesana con Ensalada",
+              "emoji": "🍆",
+              "calories": 165,
+              "protein": 10.4,
+              "carbs": 20.6,
+              "fat": 5.2,
+              "defaultQuantity": 295
+            },
+            "summary": [
+              "74% fewer calories",
+              "67% fewer carbs",
+              "84% less fat"
+            ],
+            "featuredInsight": "Eggplant replaces pasta layers, cutting carbs from 62g to 21g.",
+            "description": "Roasted eggplant with light marinara and part-skim cheese.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Eggplant Parmesan with Salad",
+              "difficulty": "Medium",
+              "time": "30 minutes",
+              "servings": 1,
+              "ingredients": [
+                "150g eggplant",
+                "60g marinara",
+                "25g part-skim mozzarella",
+                "1 tsp olive oil",
+                "40g mixed lettuce",
+                "Balsamic vinegar"
+              ],
+              "steps": [
+                "Slice and roast eggplant",
+                "Top with marinara and cheese",
+                "Broil until cheese melts",
+                "Toss salad with balsamic",
+                "Serve together"
+              ],
+              "nutrition": {
+                "calories": 165,
+                "protein": 10.4,
+                "carbs": 20.6,
+                "fat": 5.2
+              },
+              "imageName": "Eggplant_Parmesan_with_Side_Salad"
+            }
+          }
+        },
+        {
+          "id": "dinner_swap_2",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Curry de Pollo con Salsa de Crema",
+              "emoji": "🍛",
+              "calories": 700,
+              "protein": 35.0,
+              "carbs": 55.0,
+              "fat": 38.0,
+              "defaultQuantity": 350
+            },
+            "alternative": {
+              "name": "Curry de Garbanzos y Espinacas con Arroz Integral",
+              "emoji": "🍛",
+              "calories": 319,
+              "protein": 14.2,
+              "carbs": 57.2,
+              "fat": 4.6,
+              "defaultQuantity": 330
+            },
+            "summary": [
+              "54% fewer calories",
+              "88% less fat",
+              "12g fiber"
+            ],
+            "featuredInsight": "Tomato-based curry eliminates heavy cream, cutting fat from 38g to 4.6g.",
+            "description": "Plant-based curry with chickpeas and spinach for fiber and nutrients.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Chickpea & Spinach Curry with Brown Rice",
+              "difficulty": "Easy",
+              "time": "25 minutes",
+              "servings": 1,
+              "ingredients": [
+                "100g chickpeas",
+                "50g spinach",
+                "100g tomato curry sauce",
+                "80g brown rice",
+                "1 tsp curry powder",
+                "1 clove garlic"
+              ],
+              "steps": [
+                "Cook rice",
+                "Sauté garlic and curry powder",
+                "Add chickpeas and sauce",
+                "Simmer 5-7 min",
+                "Add spinach",
+                "Serve over rice"
+              ],
+              "nutrition": {
+                "calories": 319,
+                "protein": 14.2,
+                "carbs": 57.2,
+                "fat": 4.6
+              },
+              "imageName": "Chickpea_and_Spinach_Curry_with_Brown_Rice"
+            }
+          }
+        },
+        {
+          "id": "dinner_swap_3",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Pollo General Tso con Arroz Frito",
+              "emoji": "🥟",
+              "calories": 850,
+              "protein": 40.0,
+              "carbs": 90.0,
+              "fat": 38.0,
+              "defaultQuantity": 400
+            },
+            "alternative": {
+              "name": "Salteado de Pollo y Brócoli con Quinoa",
+              "emoji": "🥦",
+              "calories": 387,
+              "protein": 43.8,
+              "carbs": 26.9,
+              "fat": 11.2,
+              "defaultQuantity": 335
+            },
+            "summary": [
+              "54% fewer calories",
+              "70% fewer carbs",
+              "71% less fat"
+            ],
+            "featuredInsight": "Eliminates deep-fried breading and sugary sauce, saving 463 calories.",
+            "description": "Light stir-fry with quinoa for complete plant protein.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Chicken & Broccoli Stir Fry with Quinoa",
+              "difficulty": "Easy",
+              "time": "20 minutes",
+              "servings": 1,
+              "ingredients": [
+                "120g chicken breast",
+                "80g broccoli",
+                "40g carrots",
+                "80g quinoa",
+                "10g soy sauce",
+                "5g sesame oil",
+                "Garlic, ginger"
+              ],
+              "steps": [
+                "Cook quinoa",
+                "Stir-fry chicken 4-5 min",
+                "Add vegetables and aromatics",
+                "Add soy sauce",
+                "Serve over quinoa"
+              ],
+              "nutrition": {
+                "calories": 387,
+                "protein": 43.8,
+                "carbs": 26.9,
+                "fat": 11.2
+              },
+              "imageName": "Chicken_and_Broccoli_Stir_Fry_with_Quinoa"
+            }
+          }
+        },
+        {
+          "id": "dinner_swap_4",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Hot Dog con Chili y Queso",
+              "emoji": "🌭",
+              "calories": 550,
+              "protein": 20.0,
+              "carbs": 42.0,
+              "fat": 30.0,
+              "defaultQuantity": 140
+            },
+            "alternative": {
+              "name": "Salchicha de Pavo a la Parrilla con Verduras",
+              "emoji": "🥒",
+              "calories": 288,
+              "protein": 17.1,
+              "carbs": 7.2,
+              "fat": 22.3,
+              "defaultQuantity": 190
+            },
+            "summary": [
+              "48% fewer calories",
+              "83% fewer carbs",
+              "Adds vegetables"
+            ],
+            "featuredInsight": "Turkey sausage reduces sodium by 40%. Grilled vegetables add vitamins.",
+            "description": "Leaner turkey sausage with fresh grilled vegetables.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Grilled Turkey Sausage with Veggies",
+              "difficulty": "Easy",
+              "time": "15 minutes",
+              "servings": 1,
+              "ingredients": [
+                "1 turkey sausage (80g)",
+                "50g zucchini",
+                "50g bell peppers",
+                "10g olive oil",
+                "Italian seasoning"
+              ],
+              "steps": [
+                "Grill sausage 10-12 min",
+                "Toss veggies with oil and herbs",
+                "Grill veggies 4-5 min per side",
+                "Serve together"
+              ],
+              "nutrition": {
+                "calories": 288,
+                "protein": 17.1,
+                "carbs": 7.2,
+                "fat": 22.3
+              },
+              "imageName": "Grilled_Turkey_Sausage_with_Veggies"
+            }
+          }
+        },
+        {
+          "id": "dinner_swap_5",
+          "type": "swapExample",
+          "swap": {
+            "original": {
+              "name": "Rollo de Sushi Tempura Frito",
+              "emoji": "🍣",
+              "calories": 480,
+              "protein": 14.0,
+              "carbs": 52.0,
+              "fat": 22.0,
+              "defaultQuantity": 180
+            },
+            "alternative": {
+              "name": "Rollo de Sushi de Salmón y Aguacate",
+              "emoji": "🍣",
+              "calories": 320,
+              "protein": 16.2,
+              "carbs": 32.5,
+              "fat": 12.8,
+              "defaultQuantity": 195
+            },
+            "summary": [
+              "33% fewer calories",
+              "42% less fat",
+              "Omega-3 fatty acids"
+            ],
+            "featuredInsight": "Fresh salmon provides 1200mg omega-3s for heart and brain health.",
+            "description": "Fresh fish delivers omega-3s. Avocado provides healthy monounsaturated fats.",
+            "isComposedMeal": true,
+            "recipe": {
+              "title": "Salmon & Avocado Sushi Roll",
+              "difficulty": "Medium",
+              "time": "30 minutes",
+              "servings": 1,
+              "ingredients": [
+                "100g sushi rice",
+                "60g fresh salmon",
+                "30g avocado",
+                "1 nori sheet",
+                "Rice vinegar",
+                "Soy sauce for serving"
+              ],
+              "steps": [
+                "Cook and season sushi rice",
+                "Place nori on bamboo mat",
+                "Spread rice on nori",
+                "Add salmon and avocado",
+                "Roll tightly",
+                "Slice into pieces"
+              ],
+              "nutrition": {
+                "calories": 320,
+                "protein": 16.2,
+                "carbs": 32.5,
+                "fat": 12.8
+              },
+              "imageName": "Salmon_and_Avocado_Sushi_Roll"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
