@@ -13,7 +13,6 @@
           "type": "badFood",
           "food": {
             "name": "Frosted Donuts",
-            "nameKey": "food.frosted_donuts",
             "calories": 494,
             "protein": 4.7,
             "carbs": 58.8,
@@ -27,7 +26,6 @@
           "type": "badFood",
           "food": {
             "name": "Chocolate Muffin",
-            "nameKey": "food.chocolate_muffin",
             "calories": 317,
             "protein": 4.2,
             "carbs": 45.8,
@@ -41,7 +39,6 @@
           "type": "badFood",
           "food": {
             "name": "Sugary Cereal",
-            "nameKey": "food.sugary_cereal",
             "calories": 389,
             "protein": 3.3,
             "carbs": 77.8,
@@ -55,7 +52,6 @@
           "type": "badFood",
           "food": {
             "name": "Bacon & Egg Sandwich",
-            "nameKey": "food.bacon_egg_sandwich",
             "calories": 300,
             "protein": 12.0,
             "carbs": 23.3,
@@ -69,7 +65,6 @@
           "type": "badFood",
           "food": {
             "name": "Butter Croissant",
-            "nameKey": "food.butter_croissant",
             "calories": 457,
             "protein": 8.6,
             "carbs": 48.6,
@@ -83,7 +78,6 @@
           "type": "badFood",
           "food": {
             "name": "Syrup Pancakes",
-            "nameKey": "food.syrup_pancakes",
             "calories": 260,
             "protein": 4.0,
             "carbs": 42.5,
@@ -97,7 +91,6 @@
           "type": "badFood",
           "food": {
             "name": "Frappuccino",
-            "nameKey": "food.frappuccino",
             "calories": 117,
             "protein": 1.7,
             "carbs": 18.6,
@@ -111,7 +104,6 @@
           "type": "badFood",
           "food": {
             "name": "Sausage McMuffin",
-            "nameKey": null,
             "calories": 342,
             "protein": 12.0,
             "carbs": 24.8,
@@ -125,7 +117,6 @@
           "type": "badFood",
           "food": {
             "name": "Churros",
-            "nameKey": null,
             "calories": 412,
             "protein": 5.3,
             "carbs": 55.3,
@@ -139,7 +130,6 @@
           "type": "badFood",
           "food": {
             "name": "Cookie Pack",
-            "nameKey": null,
             "calories": 475,
             "protein": 5.0,
             "carbs": 65.0,
@@ -153,7 +143,6 @@
           "type": "badFood",
           "food": {
             "name": "Nutella Toast",
-            "nameKey": null,
             "calories": 438,
             "protein": 8.8,
             "carbs": 52.5,
@@ -167,7 +156,6 @@
           "type": "badFood",
           "food": {
             "name": "Cinnamon Roll",
-            "nameKey": null,
             "calories": 420,
             "protein": 6.0,
             "carbs": 60.0,
@@ -181,7 +169,6 @@
           "type": "badFood",
           "food": {
             "name": "Pop-Tarts",
-            "nameKey": null,
             "calories": 396,
             "protein": 4.2,
             "carbs": 75.0,
@@ -195,7 +182,6 @@
           "type": "badFood",
           "food": {
             "name": "Orange Juice (Carton)",
-            "nameKey": null,
             "calories": 44,
             "protein": 0.6,
             "carbs": 10.0,
@@ -271,7 +257,8 @@
                 "carbs": 37.9,
                 "fat": 4.5
               },
-              "imageName": "Egg_White_Veggie_Burrito"
+              "imageName": "Egg_White_Veggie_Burrito",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/egg_white_veggie_burrito.jpg"
             }
           }
         },
@@ -330,7 +317,8 @@
                 "carbs": 33.9,
                 "fat": 7.2
               },
-              "imageName": "Whole-Grain_Waffle_with_Greek_Yogurt_and_Berries"
+              "imageName": "Whole-Grain_Waffle_with_Greek_Yogurt_and_Berries",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/whole_grain_waffle_greek_yogurt_berries.jpg"
             }
           }
         },
@@ -388,7 +376,8 @@
                 "carbs": 17.2,
                 "fat": 0.5
               },
-              "imageName": "Skyr_with_Apple_and_Cinnamon"
+              "imageName": "Skyr_with_Apple_and_Cinnamon",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/skyr_apple_cinnamon.jpg"
             }
           }
         },
@@ -447,7 +436,8 @@
                 "carbs": 27.8,
                 "fat": 17.2
               },
-              "imageName": "Eggs_on_Whole-Grain_Toast_with_Tomato"
+              "imageName": "Eggs_on_Whole-Grain_Toast_with_Tomato",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/eggs_whole_grain_toast_tomato.jpg"
             }
           }
         },
@@ -504,7 +494,8 @@
                 "carbs": 19.8,
                 "fat": 15.9
               },
-              "imageName": "Chia_Pudding_with_Berries"
+              "imageName": "Chia_Pudding_with_Berries",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/chia_pudding_berries.jpg"
             }
           }
         },
@@ -561,7 +552,8 @@
                 "carbs": 27.7,
                 "fat": 4.2
               },
-              "imageName": "Protein_Smoothie_with_Banana_and_Spinach"
+              "imageName": "Protein_Smoothie_with_Banana_and_Spinach",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/protein_smoothie_banana_spinach.jpg"
             }
           }
         },
@@ -649,7 +641,8 @@
                 "carbs": 17.1,
                 "fat": 7.3
               },
-              "imageName": "Cottage_Cheese_Bowl_with_Pineapple"
+              "imageName": "Cottage_Cheese_Bowl_with_Pineapple",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/cottage_cheese_bowl_pineapple.jpg"
             }
           }
         }
@@ -665,7 +658,6 @@
           "type": "badFood",
           "food": {
             "name": "Fast Food Burger",
-            "nameKey": null,
             "calories": 296,
             "protein": 11.4,
             "carbs": 20.5,
@@ -679,7 +671,6 @@
           "type": "badFood",
           "food": {
             "name": "Fried Chicken Sandwich",
-            "nameKey": null,
             "calories": 290,
             "protein": 14.0,
             "carbs": 25.0,
@@ -693,7 +684,6 @@
           "type": "badFood",
           "food": {
             "name": "Pepperoni Pizza Slice",
-            "nameKey": null,
             "calories": 291,
             "protein": 10.9,
             "carbs": 27.3,
@@ -707,7 +697,6 @@
           "type": "badFood",
           "food": {
             "name": "Large French Fries",
-            "nameKey": null,
             "calories": 320,
             "protein": 4.0,
             "carbs": 43.3,
@@ -721,7 +710,6 @@
           "type": "badFood",
           "food": {
             "name": "Hot Dog with Bun",
-            "nameKey": null,
             "calories": 450,
             "protein": 15.0,
             "carbs": 35.0,
@@ -735,7 +723,6 @@
           "type": "badFood",
           "food": {
             "name": "Deli Ham & Cheese Sandwich",
-            "nameKey": null,
             "calories": 289,
             "protein": 11.1,
             "carbs": 26.7,
@@ -749,7 +736,6 @@
           "type": "badFood",
           "food": {
             "name": "Creamy Alfredo Pasta",
-            "nameKey": null,
             "calories": 257,
             "protein": 7.9,
             "carbs": 28.6,
@@ -763,7 +749,6 @@
           "type": "badFood",
           "food": {
             "name": "Fried Dumplings",
-            "nameKey": null,
             "calories": 256,
             "protein": 7.5,
             "carbs": 23.8,
@@ -777,7 +762,6 @@
           "type": "badFood",
           "food": {
             "name": "Grilled Cheese Sandwich",
-            "nameKey": null,
             "calories": 333,
             "protein": 10.0,
             "carbs": 27.5,
@@ -849,7 +833,8 @@
                 "carbs": 30.9,
                 "fat": 11.3
               },
-              "imageName": "Turkey_Avocado_Sandwich_on_Whole_Grain"
+              "imageName": "Turkey_Avocado_Sandwich_on_Whole_Grain",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/turkey_avocado_sandwich_whole_grain.jpg"
             }
           }
         },
@@ -909,7 +894,8 @@
                 "carbs": 59.6,
                 "fat": 1.9
               },
-              "imageName": "Black_Bean_Burrito_Bowl"
+              "imageName": "Black_Bean_Burrito_Bowl",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/black_bean_burrito_bowl.jpg"
             }
           }
         },
@@ -968,7 +954,8 @@
                 "carbs": 28.8,
                 "fat": 5.5
               },
-              "imageName": "Roasted_Potato_Wedges_with_Greek_Yogurt_Dip"
+              "imageName": "Roasted_Potato_Wedges_with_Greek_Yogurt_Dip",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/roasted_potato_wedges_greek_yogurt_dip.jpg"
             }
           }
         },
@@ -1027,7 +1014,8 @@
                 "carbs": 6.5,
                 "fat": 12.1
               },
-              "imageName": "Grilled_Chicken_Skewers_with_Side_Salad"
+              "imageName": "Grilled_Chicken_Skewers_with_Side_Salad",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/grilled_chicken_skewers_side_salad.jpg"
             }
           }
         },
@@ -1088,7 +1076,8 @@
                 "carbs": 58.1,
                 "fat": 5.8
               },
-              "imageName": "Chickpea_Pasta_with_Tomato_and_Basil"
+              "imageName": "Chickpea_Pasta_with_Tomato_and_Basil",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/chickpea_pasta_tomato_basil.jpg"
             }
           }
         },
@@ -1148,7 +1137,8 @@
                 "carbs": 19.4,
                 "fat": 12.4
               },
-              "imageName": "Baked_White_Fish_with_Quinoa_Salad"
+              "imageName": "Baked_White_Fish_with_Quinoa_Salad",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/baked_white_fish_quinoa_salad.jpg"
             }
           }
         },
@@ -1206,7 +1196,8 @@
                 "carbs": 38.3,
                 "fat": 9.7
               },
-              "imageName": "Turkey_Spinach_Whole-Wheat_Wrap"
+              "imageName": "Turkey_Spinach_Whole-Wheat_Wrap",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/turkey_spinach_whole_wheat_wrap.jpg"
             }
           }
         },
@@ -1268,7 +1259,8 @@
                 "carbs": 28.2,
                 "fat": 11.7
               },
-              "imageName": "Tofu_Broccoli_Stir-Fry_with_Brown_Rice"
+              "imageName": "Tofu_Broccoli_Stir-Fry_with_Brown_Rice",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/tofu_broccoli_stir_fry_brown_rice.jpg"
             }
           }
         }
@@ -1284,7 +1276,6 @@
           "type": "badFood",
           "food": {
             "name": "Potato Chips",
-            "nameKey": null,
             "calories": 536,
             "protein": 7.0,
             "carbs": 53.0,
@@ -1298,7 +1289,6 @@
           "type": "badFood",
           "food": {
             "name": "Candy Bar",
-            "nameKey": null,
             "calories": 500,
             "protein": 6.0,
             "carbs": 60.0,
@@ -1312,7 +1302,6 @@
           "type": "badFood",
           "food": {
             "name": "Cookies",
-            "nameKey": null,
             "calories": 488,
             "protein": 5.5,
             "carbs": 64.0,
@@ -1326,7 +1315,6 @@
           "type": "badFood",
           "food": {
             "name": "Soda & Crackers",
-            "nameKey": null,
             "calories": 66,
             "protein": 1.0,
             "carbs": 16.0,
@@ -1340,7 +1328,6 @@
           "type": "badFood",
           "food": {
             "name": "Movie Theater Popcorn (buttered)",
-            "nameKey": null,
             "calories": 500,
             "protein": 9.0,
             "carbs": 52.0,
@@ -1354,7 +1341,6 @@
           "type": "badFood",
           "food": {
             "name": "Cheese Nachos",
-            "nameKey": null,
             "calories": 330,
             "protein": 7.0,
             "carbs": 35.0,
@@ -1368,7 +1354,6 @@
           "type": "badFood",
           "food": {
             "name": "Glazed Donut (snack)",
-            "nameKey": null,
             "calories": 420,
             "protein": 5.0,
             "carbs": 47.0,
@@ -1382,7 +1367,6 @@
           "type": "badFood",
           "food": {
             "name": "Packaged Snack Cakes",
-            "nameKey": null,
             "calories": 380,
             "protein": 3.5,
             "carbs": 58.0,
@@ -1396,7 +1380,6 @@
           "type": "badFood",
           "food": {
             "name": "S'mores",
-            "nameKey": null,
             "calories": 460,
             "protein": 5.0,
             "carbs": 74.0,
@@ -1410,7 +1393,6 @@
           "type": "badFood",
           "food": {
             "name": "PB&J Sandwich",
-            "nameKey": null,
             "calories": 360,
             "protein": 11.0,
             "carbs": 45.0,
@@ -1478,7 +1460,8 @@
                 "carbs": 26.4,
                 "fat": 3.4
               },
-              "imageName": "High-Protein_Frozen_Yogurt_Cup"
+              "imageName": "High-Protein_Frozen_Yogurt_Cup",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/high_protein_frozen_yogurt_cup.jpg"
             }
           }
         },
@@ -1534,7 +1517,8 @@
                 "carbs": 35.4,
                 "fat": 2.3
               },
-              "imageName": "Protein_Shake_with_Banana"
+              "imageName": "Protein_Shake_with_Banana",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/protein_shake_banana.jpg"
             }
           }
         },
@@ -1656,7 +1640,8 @@
                 "carbs": 18.0,
                 "fat": 10.0
               },
-              "imageName": "Low-Carb_Cheese_Quesadilla"
+              "imageName": "Low-Carb_Cheese_Quesadilla",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/low_carb_cheese_quesadilla.jpg"
             }
           }
         },
@@ -1714,7 +1699,8 @@
                 "carbs": 28.8,
                 "fat": 0.5
               },
-              "imageName": "Fresh_Rice_Paper_Rolls_with_Shrimp"
+              "imageName": "Fresh_Rice_Paper_Rolls_with_Shrimp",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/fresh_rice_paper_rolls_shrimp.jpg"
             }
           }
         },
@@ -1770,7 +1756,8 @@
                 "carbs": 23.0,
                 "fat": 4.7
               },
-              "imageName": "Greek_Yogurt_Parfait_with_Berries"
+              "imageName": "Greek_Yogurt_Parfait_with_Berries",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/greek_yogurt_parfait_berries.jpg"
             }
           }
         },
@@ -1819,7 +1806,6 @@
           "type": "badFood",
           "food": {
             "name": "Fried Chicken & Fries",
-            "nameKey": null,
             "calories": 273,
             "protein": 11.7,
             "carbs": 20.0,
@@ -1833,7 +1819,6 @@
           "type": "badFood",
           "food": {
             "name": "Creamy Pasta",
-            "nameKey": null,
             "calories": 243,
             "protein": 7.1,
             "carbs": 26.8,
@@ -1847,7 +1832,6 @@
           "type": "badFood",
           "food": {
             "name": "Loaded Nachos",
-            "nameKey": null,
             "calories": 300,
             "protein": 7.2,
             "carbs": 26.0,
@@ -1861,7 +1845,6 @@
           "type": "badFood",
           "food": {
             "name": "Deep Dish Pizza",
-            "nameKey": null,
             "calories": 343,
             "protein": 12.9,
             "carbs": 32.1,
@@ -1875,7 +1858,6 @@
           "type": "badFood",
           "food": {
             "name": "Steak with Mashed Potatoes & Butter",
-            "nameKey": null,
             "calories": 223,
             "protein": 11.4,
             "carbs": 14.3,
@@ -1889,7 +1871,6 @@
           "type": "badFood",
           "food": {
             "name": "Beef Tacos with Sour Cream",
-            "nameKey": null,
             "calories": 300,
             "protein": 11.0,
             "carbs": 27.5,
@@ -1903,7 +1884,6 @@
           "type": "badFood",
           "food": {
             "name": "Ramen Noodles (Instant)",
-            "nameKey": null,
             "calories": 612,
             "protein": 14.1,
             "carbs": 76.5,
@@ -1917,7 +1897,6 @@
           "type": "badFood",
           "food": {
             "name": "Fried Dumpling Platter",
-            "nameKey": null,
             "calories": 267,
             "protein": 8.3,
             "carbs": 24.2,
@@ -1931,7 +1910,6 @@
           "type": "badFood",
           "food": {
             "name": "Meat Pie",
-            "nameKey": null,
             "calories": 260,
             "protein": 8.8,
             "carbs": 22.0,
@@ -1945,7 +1923,6 @@
           "type": "badFood",
           "food": {
             "name": "Fried Shrimp Basket",
-            "nameKey": null,
             "calories": 257,
             "protein": 10.0,
             "carbs": 22.1,
@@ -1959,7 +1936,6 @@
           "type": "badFood",
           "food": {
             "name": "Philly Cheesesteak Sandwich",
-            "nameKey": null,
             "calories": 263,
             "protein": 11.3,
             "carbs": 21.3,
@@ -2030,7 +2006,8 @@
                 "carbs": 2.0,
                 "fat": 4.9
               },
-              "imageName": "Grilled_Turkey_Burger_Lettuce_Wrap"
+              "imageName": "Grilled_Turkey_Burger_Lettuce_Wrap",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/grilled_turkey_burger_lettuce_wrap.jpg"
             }
           }
         },
@@ -2090,7 +2067,8 @@
                 "carbs": 20.6,
                 "fat": 5.2
               },
-              "imageName": "Eggplant_Parmesan_with_Side_Salad"
+              "imageName": "Eggplant_Parmesan_with_Side_Salad",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/eggplant_parmesan_side_salad.jpg"
             }
           }
         },
@@ -2151,7 +2129,8 @@
                 "carbs": 57.2,
                 "fat": 4.6
               },
-              "imageName": "Chickpea_and_Spinach_Curry_with_Brown_Rice"
+              "imageName": "Chickpea_and_Spinach_Curry_with_Brown_Rice",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/chickpea_spinach_curry_brown_rice.jpg"
             }
           }
         },
@@ -2212,7 +2191,8 @@
                 "carbs": 26.9,
                 "fat": 11.2
               },
-              "imageName": "Chicken_and_Broccoli_Stir_Fry_with_Quinoa"
+              "imageName": "Chicken_and_Broccoli_Stir_Fry_with_Quinoa",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/chicken_broccoli_stir_fry_quinoa.jpg"
             }
           }
         },
@@ -2270,7 +2250,8 @@
                 "carbs": 7.2,
                 "fat": 22.3
               },
-              "imageName": "Grilled_Turkey_Sausage_with_Veggies"
+              "imageName": "Grilled_Turkey_Sausage_with_Veggies",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/grilled_turkey_sausage_veggies.jpg"
             }
           }
         },
@@ -2331,7 +2312,8 @@
                 "carbs": 32.5,
                 "fat": 12.8
               },
-              "imageName": "Salmon_and_Avocado_Sushi_Roll"
+              "imageName": "Salmon_and_Avocado_Sushi_Roll",
+              "imageUrl": "https://nutriswap-proxi.onrender.com/images/en/salmon_avocado_sushi_roll.jpg"
             }
           }
         }
