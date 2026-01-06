@@ -286,7 +286,7 @@
 
     {
       "id": "lunch_bad",
-      "title": "⚠️ Déjeuners Français Trop Lourds",
+      "title": "⚠️ Déjeuners Caloriques",
       "category": "lunch",
       "items": [
         {
@@ -933,7 +933,7 @@
     },
     {
       "id": "dinner_swaps",
-      "title": "✨ Dîners Plus Légers (Style Français)",
+      "title": "✨ Dîners Plus Légers",
       "category": "dinner",
       "items": [
         {
