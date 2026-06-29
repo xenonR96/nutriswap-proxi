@@ -52,6 +52,13 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
+// Remote swap content (served to iOS app at /content/v1/swaps_{lang}.json)
+const contentV1Dir = path.join(__dirname, 'content', 'v1');
+app.use('/content/v1', express.static(contentV1Dir, {
+  maxAge: '1h',
+  fallthrough: true,
+}));
+
 // Health check endpoint
 app.get('/api/status', (req, res) => {
   res.status(200).json({ status: 'OK', message: 'Proxy server is up and running' });
