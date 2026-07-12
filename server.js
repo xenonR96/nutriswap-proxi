@@ -59,6 +59,16 @@ app.use('/content/v1', express.static(contentV1Dir, {
   fallthrough: true,
 }));
 
+// Recipe hero images referenced by swaps_*.json (e.g. /images/fr/yaourt_grec_banane_cacao.png)
+const recipeImagesDir = path.join(__dirname, 'images');
+if (!fs.existsSync(recipeImagesDir)) {
+  fs.mkdirSync(recipeImagesDir, { recursive: true });
+}
+app.use('/images', express.static(recipeImagesDir, {
+  maxAge: '7d',
+  fallthrough: true,
+}));
+
 // Health check endpoint
 app.get('/api/status', (req, res) => {
   res.status(200).json({ status: 'OK', message: 'Proxy server is up and running' });
