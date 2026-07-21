@@ -823,7 +823,7 @@
             }
           }
         },
-        { "id": "snack_swap_2", 
+        { "id": "snack_swap_3", 
           "type": "swapExample", 
           "swap": { "original": {
             "name": "Barre Snickers", 
@@ -838,7 +838,7 @@
               "https://nutriswap-proxi.onrender.com/images/fr/snickers_maison_dattes.png" } } 
         },
         {
-          "id": "snack_swap_3",
+          "id": "snack_swap_4",
           "type": "swapExample",
           "swap": {
             "original": {
