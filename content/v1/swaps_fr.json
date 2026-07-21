@@ -823,6 +823,20 @@
             }
           }
         },
+        { "id": "snack_swap_2", 
+          "type": "swapExample", 
+          "swap": { "original": {
+            "name": "Barre Snickers", 
+            "emoji": "🍫", "calories": 245, "protein": 4.3, "carbs": 30.0, "fat": 12.0, "defaultQuantity": 50 }, 
+            "alternative": { 
+              "name": "Snickers maison aux dattes", 
+              "emoji": "🍫", "calories": 163, "protein": 2.3, "carbs": 23.7, "fat": 7.6, "defaultQuantity": 40 }, 
+            "summary": [ "33 % de calories en moins", "Une alternative faite maison", "Des ingrédients simples" ], 
+            "featuredInsight": "Les dattes apportent une texture fondante et un goût naturellement caramélisé, tandis que le beurre de cacahuète aide à rendre la collation plus rassasiante.", 
+            "description": "Une version maison, fondante et chocolatée du célèbre Snickers.", "isComposedMeal": true, "recipe": { "title": "Snickers maison aux dattes", "difficulty": "Facile", "time": "10 minutes + 1 heure au congélateur", "servings": 6, "ingredients": [ "6 dattes Medjool", "6 c. à café de beurre de cacahuète lisse", "60 g de chocolat noir", "1 c. à café d’huile de coco", "Quelques flocons de sel" ], "steps": [ "Retirer les noyaux des dattes.", "Déposer les dattes dans un petit récipient carré recouvert de papier cuisson.", "Aplatir les dattes et les presser les unes contre les autres pour former une base uniforme.", "Étaler le beurre de cacahuète sur toute la surface.", "Faire fondre le chocolat noir avec l’huile de coco, puis mélanger jusqu’à obtenir une texture lisse.", "Verser le chocolat fondu sur la couche de beurre de cacahuète.", "Ajouter quelques flocons de sel sur le dessus.", "Placer au congélateur pendant environ 1 heure.", "Sortir la préparation du récipient, puis la découper en 6 portions avant de servir." ], "nutrition": { "calories": 163, "protein": 2.3, "carbs": 23.7, "fat": 7.6 }, 
+              "imageName": "Snickers_Maison_Dattes", "imageUrl": 
+              "https://nutriswap-proxi.onrender.com/images/fr/snickers_maison_dattes.png" } } 
+        },
         {
           "id": "snack_swap_3",
           "type": "swapExample",
