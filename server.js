@@ -420,34 +420,73 @@ function extractNutrient(description, type) {
   return match ? parseFloat(match[1]) : 0;
 }
 
-// MARK: - Product ingredient report (photo + metadata → email team for OFF correction)
-app.post('/api/product-report', productReportUpload.single('image'), async (req, res) => {
+// MARK: - Product ingredient report (photos + metadata → email team for OFF correction)
+app.post(
+  '/api/product-report',
+  productReportUpload.fields([
+    { name: 'productImage', maxCount: 1 },
+    { name: 'ingredientsImage', maxCount: 1 },
+    { name: 'nutritionImage', maxCount: 1 },
+  ]),
+  async (req, res) => {
+  const uploadedFiles = [
+    ...(req.files?.productImage || []),
+    ...(req.files?.ingredientsImage || []),
+    ...(req.files?.nutritionImage || []),
+  ];
+
   try {
-    if (!req.file) {
-      return res.status(400).json({ code: 400, message: 'Image is required' });
+    const productFile = req.files?.productImage?.[0];
+    const ingredientsFile = req.files?.ingredientsImage?.[0];
+    const nutritionFile = req.files?.nutritionImage?.[0];
+
+    if (!productFile || !ingredientsFile || !nutritionFile) {
+      uploadedFiles.forEach((file) => cleanupUploadedFile(file.path));
+      return res.status(400).json({
+        code: 400,
+        message: 'Three photos are required: product, ingredients, and nutrition',
+      });
     }
 
     const barcode = sanitizeBarcode(req.body?.barcode);
     if (!barcode) {
-      cleanupUploadedFile(req.file.path);
+      uploadedFiles.forEach((file) => cleanupUploadedFile(file.path));
       return res.status(400).json({ code: 400, message: 'Valid barcode is required (8–14 digits)' });
     }
 
     const rateKey = `${req.ip || 'unknown'}:${barcode}`;
     const reportCount = reportRateCache.get(rateKey) || 0;
     if (reportCount >= 3) {
-      cleanupUploadedFile(req.file.path);
+      uploadedFiles.forEach((file) => cleanupUploadedFile(file.path));
       return res.status(429).json({ code: 429, message: 'Too many reports for this product. Please try again later.' });
     }
     reportRateCache.set(rateKey, reportCount + 1);
 
-    const reportId = path.basename(req.file.filename, path.extname(req.file.filename));
+    const reportId = randomUUID();
     const productName = (req.body?.productName || '').trim() || 'Unknown product';
     const brand = (req.body?.brand || '').trim();
     const language = (req.body?.language || '').trim() || 'en';
     const ingredientsText = (req.body?.ingredientsText || '').trim();
     const note = (req.body?.note || '').trim();
     const userId = (req.body?.userId || '').trim();
+
+    const images = {
+      product: {
+        path: productFile.path,
+        filename: productFile.filename,
+        label: 'Product',
+      },
+      ingredients: {
+        path: ingredientsFile.path,
+        filename: ingredientsFile.filename,
+        label: 'Ingredients',
+      },
+      nutrition: {
+        path: nutritionFile.path,
+        filename: nutritionFile.filename,
+        label: 'Nutrition',
+      },
+    };
 
     const metadata = {
       reportId,
@@ -458,13 +497,15 @@ app.post('/api/product-report', productReportUpload.single('image'), async (req,
       ingredientsText: ingredientsText || null,
       note: note || null,
       userId: userId || null,
-      imagePath: req.file.path,
-      imageFilename: req.file.filename,
+      images,
+      // Keep legacy single-image fields pointing at ingredients for older tooling
+      imagePath: ingredientsFile.path,
+      imageFilename: ingredientsFile.filename,
       submittedAt: new Date().toISOString(),
       clientIp: req.ip || null,
     };
 
-    const metadataPath = path.join(path.dirname(req.file.path), `${reportId}.json`);
+    const metadataPath = path.join(path.dirname(productFile.path), `${reportId}.json`);
     fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2), 'utf8');
 
     await sendProductReportEmail(metadata);
@@ -473,9 +514,7 @@ app.post('/api/product-report', productReportUpload.single('image'), async (req,
     res.status(200).json({ ok: true, reportId });
   } catch (error) {
     console.error('[ProductReport] Error:', error.message);
-    if (req.file?.path) {
-      cleanupUploadedFile(req.file.path);
-    }
+    uploadedFiles.forEach((file) => cleanupUploadedFile(file.path));
     res.status(500).json({ code: 500, message: error.message || 'Failed to submit product report' });
   }
 });
@@ -483,7 +522,7 @@ app.post('/api/product-report', productReportUpload.single('image'), async (req,
 app.use((err, req, res, next) => {
   if (err instanceof multer.MulterError) {
     if (err.code === 'LIMIT_FILE_SIZE') {
-      return res.status(400).json({ code: 400, message: 'Image must be 5 MB or smaller' });
+      return res.status(400).json({ code: 400, message: 'Each image must be 5 MB or smaller' });
     }
     return res.status(400).json({ code: 400, message: err.message });
   }
@@ -539,8 +578,12 @@ async function sendProductReportEmail(metadata) {
   const offProductUrl = `https://world.openfoodfacts.org/product/${metadata.barcode}`;
   const brandLine = metadata.brand ? `${metadata.brand} — ` : '';
 
+  const imageEntries = metadata.images
+    ? Object.values(metadata.images)
+    : [{ path: metadata.imagePath, filename: metadata.imageFilename, label: 'Ingredients' }];
+
   const textBody = [
-    'New NutriSwap product ingredient report',
+    'New NutriSwap product report',
     '',
     `Product: ${brandLine}${metadata.productName}`,
     `Barcode: ${metadata.barcode}`,
@@ -556,7 +599,7 @@ async function sendProductReportEmail(metadata) {
     `Edit on Open Food Facts: ${offEditUrl}`,
     `Product page: ${offProductUrl}`,
     '',
-    'Ingredient label photo is attached.',
+    'Attached photos: product, ingredients list, and nutrition label.',
   ].filter(Boolean).join('\n');
 
   await transporter.sendMail({
@@ -564,12 +607,10 @@ async function sendProductReportEmail(metadata) {
     to,
     subject: `[NutriSwap] Product report — ${metadata.barcode} ${metadata.productName}`,
     text: textBody,
-    attachments: [
-      {
-        filename: metadata.imageFilename,
-        path: metadata.imagePath,
-      },
-    ],
+    attachments: imageEntries.map((image) => ({
+      filename: `${(image.label || 'photo').toLowerCase().replace(/\s+/g, '-')}-${image.filename}`,
+      path: image.path,
+    })),
   });
 }
 
@@ -678,6 +719,73 @@ Write the analysis for "${productName}" now.`;
     } else {
       res.end();
     }
+  }
+});
+
+
+// ---------------------------------------------------------------------------
+// OpenAI proxy — keeps the API key on the server (used by Flutter release builds)
+// ---------------------------------------------------------------------------
+
+function requireOpenAIKey(res) {
+  if (!process.env.OPENAI_API_KEY) {
+    res.status(503).json({ error: 'OPENAI_API_KEY is not configured on the proxy' });
+    return false;
+  }
+  return true;
+}
+
+app.post('/api/openai/chat/completions', async (req, res) => {
+  try {
+    if (!requireOpenAIKey(res)) return;
+    if (!req.body || typeof req.body !== 'object') {
+      return res.status(400).json({ error: 'JSON body required' });
+    }
+
+    const upstream = await axios.post(
+      'https://api.openai.com/v1/chat/completions',
+      req.body,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        timeout: 120000,
+        validateStatus: () => true,
+      }
+    );
+
+    res.status(upstream.status).json(upstream.data);
+  } catch (error) {
+    console.error('[OpenAI chat] Error:', error.message);
+    res.status(502).json({ error: 'Failed to reach OpenAI chat completions' });
+  }
+});
+
+app.post('/api/openai/images/generations', async (req, res) => {
+  try {
+    if (!requireOpenAIKey(res)) return;
+    if (!req.body || typeof req.body !== 'object') {
+      return res.status(400).json({ error: 'JSON body required' });
+    }
+
+    const upstream = await axios.post(
+      'https://api.openai.com/v1/images/generations',
+      req.body,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        timeout: 180000,
+        validateStatus: () => true,
+      }
+    );
+
+    res.status(upstream.status).json(upstream.data);
+  } catch (error) {
+    console.error('[OpenAI images] Error:', error.message);
+    res.status(502).json({ error: 'Failed to reach OpenAI image generations' });
   }
 });
 
